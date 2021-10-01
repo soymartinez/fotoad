@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+	<proj ListSeperator="," DefaultDurationUnits="days" DefaultWorkUnits="hours" HoursPerDay="8" HoursPerWeek="40" DaysPerMonth="20" DefaultStartTime="08:00" DefaultFinishTime="17:00" NADate="NA">
+		<calendar>
+			<normalhours s1="08:00" f1="12:00" s2="13:00" f2="17:00"/>
+			<dow day="sun" working="no"/>
+			<dow day="mon" working="yes"/>
+			<dow day="tue" working="yes"/>
+			<dow day="wed" working="yes"/>
+			<dow day="thu" working="yes"/>
+			<dow day="fri" working="yes"/>
+			<dow day="sat" working="no"/>
+		</calendar>
+		<currency symbol="$" digits="2" positiveOrder="0" negativeOrder="1"/>
+		<summary ScheduleFromStart="yes" CalculateCostProgress="no" MultipleCriticalPaths="no" CriticalSlack="0d" Name="Fotoad" Title="Fotoad" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00"/>
+		<tasks>
+			<task ID="0" UniqueID="0" OutlineLevel="0" Name="Fotoad" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes"/>
+			<task ID="1" UniqueID="1" OutlineLevel="1" Name="FOTOAD" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="2" UniqueID="21" OutlineLevel="2" Name="Login" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="3" UniqueID="6" OutlineLevel="3" Name="USUARIO" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="4" UniqueID="22" OutlineLevel="4" Name="Pagina principal" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="5" UniqueID="52" OutlineLevel="5" Name="No categorizados" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="6" UniqueID="54" OutlineLevel="6" Name="Foto" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="7" UniqueID="56" OutlineLevel="7" Name="Usuario" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="8" UniqueID="57" OutlineLevel="7" Name="Apoyo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="9" UniqueID="58" OutlineLevel="7" Name="Reportar" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="10" UniqueID="53" OutlineLevel="5" Name="Animales" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="11" UniqueID="75" OutlineLevel="6" Name="Foto" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="12" UniqueID="76" OutlineLevel="7" Name="Usuario" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="13" UniqueID="77" OutlineLevel="7" Name="Apoyo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="14" UniqueID="78" OutlineLevel="7" Name="Reportar" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="15" UniqueID="51" OutlineLevel="5" Name="Comida" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="16" UniqueID="79" OutlineLevel="6" Name="Foto" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="17" UniqueID="80" OutlineLevel="7" Name="Usuario" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="18" UniqueID="81" OutlineLevel="7" Name="Apoyo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="19" UniqueID="82" OutlineLevel="7" Name="Reportar" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="20" UniqueID="50" OutlineLevel="5" Name="Paisaje" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="21" UniqueID="83" OutlineLevel="6" Name="Foto" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="22" UniqueID="84" OutlineLevel="7" Name="Usuario" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="23" UniqueID="85" OutlineLevel="7" Name="Apoyo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="24" UniqueID="86" OutlineLevel="7" Name="Reportar" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="25" UniqueID="49" OutlineLevel="5" Name="Persona" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="26" UniqueID="87" OutlineLevel="6" Name="Foto" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="27" UniqueID="88" OutlineLevel="7" Name="Usuario" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="28" UniqueID="89" OutlineLevel="7" Name="Apoyo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="29" UniqueID="90" OutlineLevel="7" Name="Reportar" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="30" UniqueID="48" OutlineLevel="5" Name="Deporte " Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="31" UniqueID="91" OutlineLevel="6" Name="Foto" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="32" UniqueID="92" OutlineLevel="7" Name="Usuario" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="33" UniqueID="93" OutlineLevel="7" Name="Apoyo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="34" UniqueID="94" OutlineLevel="7" Name="Reportar" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="35" UniqueID="47" OutlineLevel="5" Name="Arte" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="36" UniqueID="95" OutlineLevel="6" Name="Foto" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="37" UniqueID="96" OutlineLevel="7" Name="Usuario" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="38" UniqueID="97" OutlineLevel="7" Name="Apoyo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="39" UniqueID="98" OutlineLevel="7" Name="Reportar" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="40" UniqueID="35" OutlineLevel="5" Name="Subir" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="41" UniqueID="36" OutlineLevel="6" Name="Imagenes" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="42" UniqueID="46" OutlineLevel="7" Name="Categorias" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="43" UniqueID="41" OutlineLevel="7" Name="Nuevo" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="44" UniqueID="43" OutlineLevel="8" Name="Privado" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="45" UniqueID="42" OutlineLevel="8" Name="Publico" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="46" UniqueID="38" OutlineLevel="7" Name="Albumes" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="47" UniqueID="45" OutlineLevel="8" Name="Seleccion de albumes" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="48" UniqueID="24" OutlineLevel="5" Name="Perfil" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="49" UniqueID="26" OutlineLevel="6" Name="Ajustes" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="50" UniqueID="44" OutlineLevel="7" Name="Informacion" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="51" UniqueID="25" OutlineLevel="6" Name="Cerrar sesion" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="52" UniqueID="23" OutlineLevel="5" Name="Barra de busqueda" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="53" UniqueID="5" OutlineLevel="3" Name="ADMINISTRADOR" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="54" UniqueID="105" OutlineLevel="4" Name="Login" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="55" UniqueID="103" OutlineLevel="5" Name="Moderador" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="56" UniqueID="99" OutlineLevel="6" Name="Reportes" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="57" UniqueID="100" OutlineLevel="7" Name="Usuario" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="58" UniqueID="101" OutlineLevel="8" Name="Foto reportada" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="59" UniqueID="102" OutlineLevel="9" Name="Suspender cuenta" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="60" UniqueID="8" OutlineLevel="4" Name="USUARIO_REGISTRO" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="61" UniqueID="11" OutlineLevel="5" Name="Dashboard" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="62" UniqueID="10" OutlineLevel="5" Name="Donantes" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="63" UniqueID="9" OutlineLevel="5" Name="Login" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="64" UniqueID="7" OutlineLevel="4" Name="Catalogo_base" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="65" UniqueID="14" OutlineLevel="5" Name="Categorias" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="66" UniqueID="15" OutlineLevel="6" Name="Albumes" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="67" UniqueID="17" OutlineLevel="7" Name="Privado" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="68" UniqueID="19" OutlineLevel="8" Name="Fotos" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="69" UniqueID="16" OutlineLevel="7" Name="Publico" Duration="1d" RemainingDuration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="70" UniqueID="18" OutlineLevel="8" Name="Fotos" Duration="1d" Start="2021-09-08T08:00" Finish="2021-09-08T17:00" EarlyStart="2021-09-08T08:00" EarlyFinish="2021-09-08T17:00" LateStart="2021-09-08T08:00" LateFinish="2021-09-08T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+		</tasks>
+		<outline current="103"/>
+	</proj>
+	<printInfo mode="scale" orient="landscape" pagesWide="1" pagesHigh="1" scale="100%" bw="no" enlarge="no" byColumn="no" adjustPageBreaks="no" marginTop="36pt" marginLeft="36pt" marginBottom="36pt" marginRight="36pt"/>
+	<pageLayouts>
+		<pageLayout id="Page Layout 1" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart with border around Title field. &#13;&#10;Border around outside pages.&#13;&#10;Page numbers upper right." SheetNumbers="yes">
+			<grid id="frame" rows="2" cols="1">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" right_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 2" description="WBS Chart Top/Left aligned.&#13;&#10;Title field displayed above chart no border. &#13;&#10;Page numbers upper right." SheetNumbers="yes">
+			<grid id="frame" rows="2" cols="1" top="1">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="1.45pt" bottom_p="1.45pt" stretch="yes"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 3" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart. &#13;&#10;&quot;Printed on&quot; Date in lower left corner.&#13;&#10;Border around every page.&#13;&#10;Page numbers in lower right. " BorderEveryPage="yes">
+			<grid id="frame" rows="3" cols="2">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" stretch="yes"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid" colspan="2"/>
+				</row>
+				<row>
+					<cell field="pCurrent Date" format="2" halign="left" label="Printed on: " left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" top_s="solid"/>
+					<cell field="p (Page Number)" format="13" halign="right" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" top_s="solid" stretch="yes"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 4" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart. &#13;&#10;&quot;Printed on&quot; date in lower left corner.&#13;&#10;Border around every page.&#13;&#10;Page numbers in lower right. &#13;&#10;No border around outside fields." BorderEveryPage="yes">
+			<grid id="frame" rows="3" cols="2" top="1" bottom="1">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" colspan="2" stretch="yes"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" colspan="2"/>
+				</row>
+				<row>
+					<cell field="pCurrent Date" format="2" halign="left" label="Printed on: " left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt"/>
+					<cell field="p (Page Number)" format="13" halign="right" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" stretch="yes"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 5" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart. &#13;&#10;&quot;Printed on&quot; date in lower left corner.&#13;&#10;Company below and center.&#13;&#10;&quot;Project Completion&quot; date lower right.&#13;&#10;Page number lower left.&#13;&#10;Manager below center.&#13;&#10;CONFIDENTIAL lower right.&#13;&#10;Border around outside pages. &#13;&#10;Page numbers in upper right. " SheetNumbers="yes">
+			<grid id="frame" rows="4" cols="3">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="3" stretch="yes"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid" colspan="3"/>
+				</row>
+				<row>
+					<cell field="pCurrent Date" format="2" label="Printed On: " left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="pCompany" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+					<cell field="pFinish" label="Project Completion: " left_p="3.6pt" right_p="3.6pt" top_p="3.6pt" bottom_p="3.6pt" left_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+				<row>
+					<cell field="p (Page Number)" format="13" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" right_s="solid" top_s="solid"/>
+					<cell field="pManager" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" left_s="solid" right_s="solid" top_s="solid"/>
+					<cell bold="yes" label="CONFIDENTIAL" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" left_s="solid" top_s="solid"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 6" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart. &#13;&#10;&quot;Printed on&quot; date in lower left corner.&#13;&#10;Manager below center.&#13;&#10;CONFIDENTIAL lower right.&#13;&#10;Border around outside pages. &#13;&#10;Page numbers in upper right. " SheetNumbers="yes">
+			<grid id="frame" rows="3" cols="3" top="1" bottom="1">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" colspan="3" stretch="yes"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" colspan="3"/>
+				</row>
+				<row>
+					<cell field="pCurrent Date" format="2" halign="left" label="Printed on: " left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt"/>
+					<cell field="pManager" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" stretch="yes"/>
+					<cell halign="right" bold="yes" label="CONFIDENTIAL" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" stretch="yes"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 7" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart with border around Title field. &#13;&#10;Border around outside pages.&#13;&#10;Legend of Fields at bottom." SheetNumbers="yes">
+			<grid id="frame" rows="3" cols="1">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" bottom_s="solid" stretch="yes"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" top_s="solid" bottom_s="solid"/>
+				</row>
+				<row>
+					<cell field="p (Legend: Fields)" halign="left" label="Fields" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" top_s="solid"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 8" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart with border around Title field. &#13;&#10;Border around outside pages.&#13;&#10;Legend of Fields and Legend of Box Border styles at bottom. " SheetNumbers="yes">
+			<grid id="frame" rows="3" cols="2">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid" colspan="2"/>
+				</row>
+				<row>
+					<cell field="p (Legend: Fields)" label="Fields" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" top_s="solid"/>
+					<cell field="p (Legend: Borders)" format="1" halign="left" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" left_s="solid" top_s="solid" stretch="yes"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+		<pageLayout id="Page Layout 9" description="WBS Chart Top/Left aligned.&#13;&#10;Title field above chart with border around Title field. &#13;&#10;Border around outside pages.&#13;&#10;Legend of Summary Tasks Fields, Task Fields and Legend of Box Border styles at bottom. " SheetNumbers="yes">
+			<grid id="frame" rows="3" cols="3">
+				<row>
+					<cell field="pTitle" font-size="10pt" bold="yes" left_p="0.7pt" right_p="0.7pt" top_p="3.6pt" bottom_p="3.6pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="3"/>
+				</row>
+				<row stretch="yes">
+					<cell field="p (Chart)" halign="left" valign="top" left_p="7.2pt" right_p="7.2pt" top_p="7.2pt" bottom_p="7.2pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid" colspan="3"/>
+				</row>
+				<row>
+					<cell field="p (Legend: Fields)" label="Summary Task Fields" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" top_s="solid"/>
+					<cell field="p (Legend: Fields)" format="1" label="Task Fields" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" right_s="solid" top_s="solid"/>
+					<cell field="p (Legend: Borders)" format="1" left_p="3.6pt" right_p="3.6pt" top_p="2.15pt" bottom_p="2.15pt" left_s="solid" top_s="solid" stretch="yes"/>
+				</row>
+			</grid>
+			<border id="frame" bkcolor="none"/>
+		</pageLayout>
+	</pageLayouts>
+	<views current="Planning View" current_wbs="Planning View" mode="normal">
+		<wbs_view id="Critical Path View 2" pagelayout="Page Layout 8" outlinesymbolpos="bottomcenter">
+			<item id="summary" before="14.4pt"/>
+			<item id="task" before="7.2pt" listmode="stemleft"/>
+			<border id="Critical Task" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Noncritical Task" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Summary" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="External Task" shdir="bottom_right" shdepth="3pt" shcolor="gray" color="gray">
+				<border_edge id="top" color="gray"/>
+				<border_edge id="left" color="gray"/>
+				<border_edge id="bottom" color="gray"/>
+				<border_edge id="right" color="gray"/>
+			</border>
+			<grid id="summary" rows="4" cols="3" top="1">
+				<row>
+					<cell field="WBS" halign="left" bold="yes" color="red" left_p="0.7pt" right_p="0.7pt" top_p="0pt" bottom_p="0pt" colspan="3"/>
+				</row>
+				<row stretch="yes">
+					<cell field="ID" bold="yes" orient="bottomtop" bkcolor="yellow" left_p="0.7pt" right_p="0.7pt" top_p="0.7pt" bottom_p="0.7pt" right_s="solid" top_s="solid" bottom_s="solid" rowspan="3"/>
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" stretch="yes" charlen="20"/>
+				</row>
+				<row>
+					<cell field="Duration" format="5" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="% Complete" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+				<row>
+					<cell field="Start" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid"/>
+					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
+				</row>
+			</grid>
+			<grid id="task" rows="4" cols="3" top="1">
+				<row>
+					<cell field="WBS" halign="left" bold="yes" color="red" left_p="0.7pt" right_p="0.7pt" top_p="0pt" bottom_p="0pt" colspan="3"/>
+				</row>
+				<row stretch="yes">
+					<cell field="ID" bold="yes" orient="bottomtop" bkcolor="yellow" left_p="0.7pt" right_p="0.7pt" top_p="0.7pt" bottom_p="0.7pt" right_s="solid" top_s="solid" bottom_s="solid" rowspan="3"/>
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" stretch="yes" charlen="20"/>
+				</row>
+				<row>
+					<cell field="Duration" format="5" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="% Complete" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+				<row>
+					<cell field="Start" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid"/>
+					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
+				</row>
+			</grid>
+		</wbs_view>
+		<wbs_view id="Critical Path View" pagelayout="Page Layout 1" outlinesymbolpos="bottomcenter">
+			<item id="summary" before="14.4pt"/>
+			<item id="task" before="2.15pt" listmode="stemleft"/>
+			<border id="Critical Task" style="null" color="red" bkcolor="none">
+				<border_edge id="top" color="red"/>
+				<border_edge id="left" color="red"/>
+				<border_edge id="bottom" color="red"/>
+				<border_edge id="right" color="red"/>
+			</border>
+			<border id="Critical Milestone" style="null" color="red" bkcolor="none">
+				<border_edge id="top" color="red"/>
+				<border_edge id="left" color="red"/>
+				<border_edge id="bottom" color="red"/>
+				<border_edge id="right" color="red"/>
+			</border>
+			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Noncritical Task" style="null" color="blue" bkcolor="none">
+				<border_edge id="top" color="blue"/>
+				<border_edge id="left" color="blue"/>
+				<border_edge id="bottom" color="blue"/>
+				<border_edge id="right" color="blue"/>
+			</border>
+			<border id="Noncritical Milestone" style="null" color="blue" bkcolor="none">
+				<border_edge id="top" color="blue"/>
+				<border_edge id="left" color="blue"/>
+				<border_edge id="bottom" color="blue"/>
+				<border_edge id="right" color="blue"/>
+			</border>
+			<border id="Noncritical Summary" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="External Task" style="null"/>
+			<grid id="summary" rows="1" cols="1">
+				<row>
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="3.6pt" bottom_p="3.6pt" charlen="20"/>
+				</row>
+			</grid>
+			<grid id="task" rows="1" cols="1">
+				<row>
+					<cell field="Name" type="wraptext" halign="left" bold="yes" left_p="0.7pt" right_p="0pt" top_p="0pt" bottom_p="0pt" charlen="20"/>
+				</row>
+			</grid>
+		</wbs_view>
+		<wbs_view id="Flags View" pagelayout="Page Layout 8" borderpolicy="flags" outlinesymbolpos="bottomcenter">
+			<item id="summary" before="14.4pt"/>
+			<item id="task" before="10.8pt" listmode="stemleft"/>
+			<border id="Critical Task" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Noncritical Task" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Summary" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="No Flag Task" bkcolor="none">
+				<border_edge id="top" bkcolor="black"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="black"/>
+				<border_edge id="bottom" bkcolor="black"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="black"/>
+			</border>
+			<border id="No Flag Summary" bkcolor="none">
+				<border_edge id="top" bkcolor="black"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="black"/>
+				<border_edge id="bottom" bkcolor="black"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="black"/>
+			</border>
+			<border id="Flag1" bkcolor="none">
+				<border_edge id="top" bkcolor="lime"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="lime"/>
+				<border_edge id="bottom" bkcolor="lime"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="lime"/>
+			</border>
+			<border id="Flag2" bkcolor="none">
+				<border_edge id="top" bkcolor="fuchsia"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="fuchsia"/>
+				<border_edge id="bottom" bkcolor="fuchsia"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="fuchsia"/>
+			</border>
+			<border id="Flag3" bkcolor="none">
+				<border_edge id="top" bkcolor="red"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="red"/>
+				<border_edge id="bottom" bkcolor="red"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="red"/>
+			</border>
+			<border id="Flag4" bkcolor="none">
+				<border_edge id="top" bkcolor="blue"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="blue"/>
+				<border_edge id="bottom" bkcolor="blue"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="blue"/>
+			</border>
+			<border id="Flag5" bkcolor="none">
+				<border_edge id="top" bkcolor="yellow"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="yellow"/>
+				<border_edge id="bottom" bkcolor="yellow"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="yellow"/>
+			</border>
+			<border id="Flag6" bkcolor="none">
+				<border_edge id="top" bkcolor="aqua"/>
+				<border_edge id="left" shape="rect" depth="5.1pt" bkcolor="aqua"/>
+				<border_edge id="bottom" bkcolor="aqua"/>
+				<border_edge id="right" shape="rect" depth="5.1pt" bkcolor="aqua"/>
+			</border>
+			<border id="Flag7" bkcolor="none"/>
+			<border id="Flag8" bkcolor="none"/>
+			<border id="Flag9" bkcolor="none"/>
+			<border id="Flag10" bkcolor="none"/>
+			<border id="Flag11" bkcolor="none"/>
+			<border id="Flag12" bkcolor="none"/>
+			<border id="Flag13" bkcolor="none"/>
+			<border id="Flag14" bkcolor="none"/>
+			<border id="Flag15" bkcolor="none"/>
+			<border id="Flag16" bkcolor="none"/>
+			<border id="Flag17" bkcolor="none"/>
+			<border id="Flag18" bkcolor="none"/>
+			<border id="Flag19" bkcolor="none"/>
+			<border id="Flag20" bkcolor="none"/>
+			<grid id="summary" rows="3" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" stretch="yes" charlen="20"/>
+				</row>
+				<row>
+					<cell field="ID" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="Duration" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+				<row>
+					<cell field="Start" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid"/>
+					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
+				</row>
+			</grid>
+			<grid id="task" rows="3" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" barcolor="red" colspan="2" stretch="yes" charlen="20"/>
+				</row>
+				<row>
+					<cell field="ID" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="Duration" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+				<row>
+					<cell field="Start" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid"/>
+					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
+				</row>
+			</grid>
+		</wbs_view>
+		<wbs_view id="Hours and Cost View" pagelayout="Page Layout 6" outlinesymbolpos="bottomcenter">
+			<item id="summary" before="18pt"/>
+			<item id="task" before="14.4pt" listmode="stemleft"/>
+			<border id="Critical Task" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Noncritical Task" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Summary" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="External Task" shdir="bottom_right" shdepth="3pt" shcolor="gray" color="gray">
+				<border_edge id="top" color="gray"/>
+				<border_edge id="left" color="gray"/>
+				<border_edge id="bottom" color="gray"/>
+				<border_edge id="right" color="gray"/>
+			</border>
+			<grid id="summary" rows="2" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" charlen="25"/>
+				</row>
+				<row>
+					<cell field="Work" format="5" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="Cost" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid"/>
+				</row>
+			</grid>
+			<grid id="task" rows="2" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" charlen="25"/>
+				</row>
+				<row>
+					<cell field="Work" format="5" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="Cost" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid"/>
+				</row>
+			</grid>
+		</wbs_view>
+		<wbs_view id="Planning View 2" pagelayout="Page Layout 7" outlinesymbolpos="bottomcenter">
+			<item id="summary" drop="28.8pt" before="10.8pt"/>
+			<item id="task" before="10.8pt"/>
+			<border id="Critical Task" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Critical Milestone" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Noncritical Task" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Noncritical Milestone" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Noncritical Summary" shdir="bottom_right" shdepth="3pt"/>
+			<border id="External Task" shdir="bottom_right" shdepth="3pt"/>
+			<grid id="summary" rows="3" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="3.6pt" bottom_p="3.6pt" right_s="solid" bottom_s="solid" colspan="2" charlen="20"/>
+				</row>
+				<row>
+					<cell field="ID" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="Duration" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid"/>
+				</row>
+				<row>
+					<cell field="Start" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" right_s="solid" top_s="solid"/>
+					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
+				</row>
+			</grid>
+			<grid id="task" rows="3" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="3.6pt" bottom_p="3.6pt" right_s="solid" bottom_s="solid" colspan="2" charlen="20"/>
+				</row>
+				<row>
+					<cell field="ID" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="Duration" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid"/>
+				</row>
+				<row>
+					<cell field="Start" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" right_s="solid" top_s="solid"/>
+					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
+				</row>
+			</grid>
+		</wbs_view>
+		<wbs_view id="Planning View" pagelayout="Page Layout 1" outlinesymbolpos="bottomcenter">
+			<item id="summary" drop="28.8pt" before="10.8pt"/>
+			<item id="task" before="10.8pt"/>
+			<border id="Critical Task" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Critical Milestone" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Noncritical Task" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Noncritical Milestone" shdir="bottom_right" shdepth="3pt"/>
+			<border id="Noncritical Summary" shdir="bottom_right" shdepth="3pt"/>
+			<border id="External Task" shdir="bottom_right" shdepth="3pt"/>
+			<grid id="summary" rows="1" cols="1">
+				<row>
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="3.6pt" bottom_p="3.6pt" charlen="20"/>
+				</row>
+			</grid>
+			<grid id="task" rows="1" cols="1">
+				<row>
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="3.6pt" bottom_p="3.6pt" barcolor="red" charlen="20"/>
+				</row>
+			</grid>
+<wbs_diff>
+	<treediff id="52">
+		<item before="20.15pt"/>
+	</treediff>
+	<treediff id="56">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="57">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="58">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="76">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="77">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="78">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="80">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="81">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="82">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="84">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="85">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="86">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="88">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="89">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="90">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="92">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="93">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="94">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="96">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="97">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="98">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="43">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="42">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="11">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="10">
+		<item listmode="stemleft"/>
+	</treediff>
+	<treediff id="9">
+		<item listmode="stemleft"/>
+	</treediff>
+</wbs_diff>
+
+		</wbs_view>
+		<wbs_view id="Progress View" pagelayout="Page Layout 8" borderpolicy="progress" outlinesymbolpos="bottomcenter">
+			<item id="summary" before="14.4pt"/>
+			<item id="task" before="7.2pt" listmode="stemleft"/>
+			<border id="Critical Task" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
+			<border id="Noncritical Task" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Noncritical Summary" shdir="bottom_right" shdepth="3pt" shcolor="blue" bkcolor="lightyellow"/>
+			<border id="Not Started Task">
+				<border_edge id="top" shape="rect" depth="5.1pt" bkcolor="green"/>
+				<border_edge id="left" bkcolor="green"/>
+				<border_edge id="bottom" shape="rect" depth="5.1pt" bkcolor="green"/>
+				<border_edge id="right" bkcolor="green"/>
+			</border>
+			<border id="Not Started Milestone">
+				<border_edge id="top" shape="triangle" depth="5.1pt" bkcolor="green"/>
+				<border_edge id="left" bkcolor="green"/>
+				<border_edge id="bottom" shape="triangle" depth="5.1pt" bkcolor="green"/>
+				<border_edge id="right" bkcolor="green"/>
+			</border>
+			<border id="Not Started Summary">
+				<border_edge id="top" shape="rect" depth="5.1pt" bkcolor="green"/>
+				<border_edge id="left" bkcolor="green"/>
+				<border_edge id="bottom" shape="rect" depth="5.1pt" bkcolor="green"/>
+				<border_edge id="right" bkcolor="green"/>
+			</border>
+			<border id="In Progress Task">
+				<border_edge id="top" shape="rect" depth="5.1pt" bkcolor="yellow"/>
+				<border_edge id="left" bkcolor="yellow"/>
+				<border_edge id="bottom" shape="rect" depth="5.1pt" bkcolor="yellow"/>
+				<border_edge id="right" bkcolor="yellow"/>
+			</border>
+			<border id="In Progress Summary">
+				<border_edge id="top" shape="rect" depth="5.1pt" bkcolor="yellow"/>
+				<border_edge id="left" bkcolor="yellow"/>
+				<border_edge id="bottom" shape="rect" depth="5.1pt" bkcolor="yellow"/>
+				<border_edge id="right" bkcolor="yellow"/>
+			</border>
+			<border id="Completed Task">
+				<border_edge id="top" shape="rect" depth="5.1pt" bkcolor="blue"/>
+				<border_edge id="left" bkcolor="blue"/>
+				<border_edge id="bottom" shape="rect" depth="5.1pt" bkcolor="blue"/>
+				<border_edge id="right" bkcolor="blue"/>
+			</border>
+			<border id="Completed Milestone">
+				<border_edge id="top" shape="triangle" depth="5.1pt" bkcolor="blue"/>
+				<border_edge id="left" bkcolor="blue"/>
+				<border_edge id="bottom" shape="triangle" depth="5.1pt" bkcolor="blue"/>
+				<border_edge id="right" bkcolor="blue"/>
+			</border>
+			<border id="Completed Summary">
+				<border_edge id="top" shape="rect" depth="5.1pt" bkcolor="blue"/>
+				<border_edge id="left" bkcolor="blue"/>
+				<border_edge id="bottom" shape="rect" depth="5.1pt" bkcolor="blue"/>
+				<border_edge id="right" bkcolor="blue"/>
+			</border>
+			<grid id="summary" rows="2" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" charlen="20"/>
+				</row>
+				<row>
+					<cell field="ID" label="Id: " left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="% Complete" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+			</grid>
+			<grid id="task" rows="2" cols="2">
+				<row stretch="yes">
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" charlen="20"/>
+				</row>
+				<row>
+					<cell field="ID" label="Id: " left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
+					<cell field="% Complete" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid" stretch="yes"/>
+				</row>
+			</grid>
+		</wbs_view>
+	</views>
+</project>

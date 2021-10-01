@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fotoad | login </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <form action="index.html" class="login-form">
+        <div class="logo">
+            <img src="images/f.png" align="left" alt="">
+            <h1 id="fotoad">otoad</h1>
+        </div>
+
+        <h1>Iniciar sesión</h1>
+
+        <div class="txtb">
+            <input type="email" placeholder="Correo electrónico, teléfono o Skype">
+        </div>
+
+        <div class="txtb">
+            <input type="password" placeholder="Contraseña">
+        </div>
+        
+        <div class="button-text">
+            ¿No tiene una cuenta? <a href="#">Cree una.</a>
+        </div>
+
+        <button class="logbtn" type="submit">Iniciar sesión</button>
+
+    </form>
+
+    <script type="text/javascript">
+        $(".txtb input").on("focus",function () {
+            $(this).addClass("focus");
+        });
+
+        $(".txtb input").on("blur",function () {
+            if ($(this).val() == "")
+            $(this).removeClass("focus");
+        });
+    </script>
+</body>
+</html>
+
