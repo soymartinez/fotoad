@@ -1,0 +1,70 @@
+
+.txt-gris { color: #616161; }
+.txt-bluedeep { color: var(--bluedeep); }
+.place-holder { font: var(--placeholder); }
+.bg-atardecer { background-color: var(--atardecer); }
+.bg-bluedeep { background-color: var(--bluedeep); }
+
+/* image-left */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#fondo {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(src\assets\img\bg-left.png);
+}
+
+#fondo h1,
+#fondo span {
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.flex-down {
+    position: absolute;
+    bottom: 30px;
+}
+
+
+
+
+
+.inciar-sesion-txt {
+    font-size: 30px;
+    margin-bottom: 27px;
+}
+
+#email input::placeholder,
+#pass input::placeholder {
+    font-size: 14px;
+    color: var(--placeholder);
+}
+
+#email input,
+#pass input {
+    height: 50px;
+}
+
+#emailInfo {
+    color: var(--placeholder);
+}
+
+#email label,
+#pass label {
+    font-size: 16px;
+}
+
+#btn-login,
+#btn-login-g {
+    padding: 13px !important;
+    border-radius: 5px;
+}

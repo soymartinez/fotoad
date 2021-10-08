@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bluedeep: #194352;
+    --atardecer: #D36B43;
+    --placeholder: #8692A6;
+    --light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--bluedeep);
+}
