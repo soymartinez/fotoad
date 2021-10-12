@@ -7,18 +7,19 @@
 
 /* image-left */
 .flex-center {
+    background-image: url(src\assets\img\bg-left.png);
     display: flex;
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 #fondo {
     width: 100%;
     min-height: 100vh;
-    background-image: url(src\assets\img\bg-left.png);
 }
 
 #fondo h1,
@@ -67,4 +68,9 @@
 #btn-login-g {
     padding: 13px !important;
     border-radius: 5px;
+}
+
+#btn-login:hover,
+#btn-login-g:hover {
+    color: white;
 }

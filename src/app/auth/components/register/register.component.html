@@ -1,0 +1,59 @@
+<section>
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>La privacidad ante todo.</h2>
+            <span>~ Equipo de FotoAD</span>
+        </div>
+        <div class="col-lg-6">
+            <button>Regresar</button>
+            <h1>Registrar nueva cuenta!</h1>
+            <span>Comparte, Explora y Apoya.</span>
+
+            <hr>
+
+            <form action="#">
+                <div class="mb-3" id="email">
+                    <label for="labelEmail" class="form-label"> Direccion de correo* </label>
+                    <input [(ngModel)]="email" type="email" class="form-control"
+                        placeholder="Ingrese su correo" name="email" required>
+
+                </div>
+                <div class="mb-3" id="pass">
+                    <label for="labelPass" class="form-label"> Crear contraseña* </label>
+                    <input [(ngModel)]="password" type="password" class="form-control"
+                        placeholder="Contraseña" name="password" required>
+                </div>
+                <div class="mb-0" id="passrepeat">
+                    <label for="labelPass" class="form-label"> Repetir contraseña </label>
+                    <input [(ngModel)]="password" type="password" class="form-control"
+                        placeholder="Escriba su contraseña nuevamente" name="password" required>
+                </div>
+                <!-- Login Help -->
+                <div class="d-flex row justify-content-between pb-4 pt-4 fs-6" id="rem-forget">
+                    <div class="col-auto">
+                        <input class="form-check-input me-3" type="radio" id="radioRecordarme">
+                        <label class="form-check-label" for="labelTerminos">Acepto los terminos y condiciones</label>
+                    </div>
+                </div>
+                <!-- Login Buttons -->
+                <div>
+                    <button (click)="login()" id="btn-login" type="submit"
+                        class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
+                        Registrar cuenta
+                    </button>
+
+                    <div class="or">
+                        <hr>
+                        <p class="or"> O </p>
+                        <hr>
+                    </div>
+                    <button (click)="loginGG()" id="btn-login-g" type="submit"
+                        class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
+                        <img src="assets/img/iconfinder_Google.png" class="lead me-2 d-none d-sm-inline">
+                        Registrate con Google
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

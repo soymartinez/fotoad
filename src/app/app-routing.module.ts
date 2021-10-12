@@ -1,27 +1,34 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth/component/login/login.component';
-import { RegisterComponent } from './auth/component/register/register.component';
-import { HomeComponent } from './pages/home/home.component';
-import { CategoriesComponent } from './pages/categories/categories.component';
-import { UserComponent } from './pages/user/user.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { RegisterComponent } from './auth/components/register/register.component';
+import { HomeComponent } from './pages/components/home/home.component';
+import { CategoriesComponent } from './pages/components/categories/categories.component';
+import { UserComponent } from './pages/components/user/user.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: LoginComponent,
     pathMatch: 'full'
 },
 {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    pathMatch: 'full'
 },
 {
     path: 'registro',
-    component: RegisterComponent
+    component: RegisterComponent,
+    pathMatch: 'full'
 },
 {
-    path: 'categorías',
+    path: 'home',
+    component: HomeComponent
+},
+{
+    path: 'categorias',
     component: CategoriesComponent
 },
 {
