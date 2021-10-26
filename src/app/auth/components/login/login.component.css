@@ -70,7 +70,28 @@
     border-radius: 5px;
 }
 
-#btn-login:hover,
+#btn-login:hover {
+    color: white;
+    background-color: #e07347;
+    transition: .4s;
+}
 #btn-login-g:hover {
     color: white;
+    background-color: #1c4b5c;
+    transition: .4s;
+}
+
+#registrar a:hover {
+    color: #3b697a;
+    transition: .4s;
+}
+
+
+.alert-text {
+    font-size: 10px;
+    color: #1c4b5c !important; 
+}
+
+.pp {
+    background: #1c4b5c !important;
 }

@@ -19,8 +19,10 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "angularx-social-login": "^4.0.1",
     "bootstrap": "^5.1.1",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^11.1.9",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

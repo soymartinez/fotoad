@@ -17,25 +17,24 @@
             <div class="px-lg-6 pt-lg-5 pb-lg-5 p-5 mt-5 text-center w-100 mb-auto" id="bienvenido">
                 <p class="m-0">Bienvenido a FotoAD</p>
             </div>
-            
 <!-- Login -->
             <div class="px-lg-6 py-lg-5 p-4 align-self-center">
                 <h1 class="fw-bold text-center inciar-sesion-txt">Inicio de sesión</h1>
-                <form action="#">
+                <form action="#" method="post" [formGroup]="miFormulario" (ngSubmit)="login()">
                     <div class="mb-3" id="email">
                         <label for="labelEmail" class="form-label"> Correo electrónico</label>
-                        <input [(ngModel)]="email" type="email" class="form-control" placeholder="Ingrese su correo electrónico" name="email" required>
-
+                        <input formControlName="email" type="email" class="form-control" placeholder="Ingrese su correo electrónico" name="email" required>
+                        
                         <div id="emailInfo" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
                     </div>
                     <div class="mb-0" id="pass">
                         <label for="labelPass" class="form-label"> Contraseña </label>
-                        <input [(ngModel)]="password" type="password" class="form-control" placeholder="Ingrese su contraseña" name="password" required>
+                        <input formControlName="password" type="password" class="form-control" placeholder="Ingrese su contraseña" name="password" autocomplete="off" required>
                     </div>
 <!-- Login Help -->
                     <div class="d-flex row justify-content-between pb-4 pt-4 fs-6" id="rem-forget">
                         <div class="col-auto">
-                            <input class="form-check-input me-2" type="radio" id="radioRecordarme">
+                            <input class="form-check-input me-2" type="checkbox" id="radioRecordarme">
                             <label class="form-check-label" for="labelRecordarme">Recordarme</label>
                         </div>
                         <div class="col-auto">
@@ -44,11 +43,11 @@
                     </div>
 <!-- Login Buttons -->
                     <div>
-                        <button (click)="login()" id="btn-login" type="submit" class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
+                        <button id="btn-login" type="submit" [disabled]="miFormulario.invalid" class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
                             Iniciar sesión
                         </button>
-                        <button (click)="loginGG()" id="btn-login-g" type="submit" class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
-                            <img src="assets/img/iconfinder_Google.png" class="lead me-2 d-none d-sm-inline">
+                        <button (click)="loginGoogle()" id="btn-login-g" type="button" class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
+                            <img src="assets/img/googleicon-gg.svg" class="me-2 d-none d-sm-inline">
                             Inicia sesión con google
                         </button>
                     </div>
@@ -57,7 +56,7 @@
 <!-- Footer -->
             <div class="px-lg-6 pt-lg-5 pb-lg-5 p-5 mb-5 text-center w-100 mt-auto" id="registrar">
                 <p class="d-inline-block txt-gris mb-0">¿No tienes cuenta?</p> 
-                <a [routerLink]="['/registro']" class="txt-bluedeep text-decoration-none"> Registrate ahora</a>
+                <a [routerLink]="['/auth/signup']" class="txt-bluedeep text-decoration-none"> Registrate ahora</a>
             </div>
         </div>
         

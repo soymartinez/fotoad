@@ -1,59 +1,112 @@
 <section>
-    <div class="row">
-        <div class="col-lg-6">
-            <h2>La privacidad ante todo.</h2>
-            <span>~ Equipo de FotoAD</span>
-        </div>
-        <div class="col-lg-6">
-            <button>Regresar</button>
-            <h1>Registrar nueva cuenta!</h1>
-            <span>Comparte, Explora y Apoya.</span>
+    <div class="row g-0">
 
-            <hr>
 
-            <form action="#">
-                <div class="mb-3" id="email">
-                    <label for="labelEmail" class="form-label"> Direccion de correo* </label>
-                    <input [(ngModel)]="email" type="email" class="form-control"
-                        placeholder="Ingrese su correo" name="email" required>
-
-                </div>
-                <div class="mb-3" id="pass">
-                    <label for="labelPass" class="form-label"> Crear contraseña* </label>
-                    <input [(ngModel)]="password" type="password" class="form-control"
-                        placeholder="Contraseña" name="password" required>
-                </div>
-                <div class="mb-0" id="passrepeat">
-                    <label for="labelPass" class="form-label"> Repetir contraseña </label>
-                    <input [(ngModel)]="password" type="password" class="form-control"
-                        placeholder="Escriba su contraseña nuevamente" name="password" required>
-                </div>
-                <!-- Login Help -->
-                <div class="d-flex row justify-content-between pb-4 pt-4 fs-6" id="rem-forget">
-                    <div class="col-auto">
-                        <input class="form-check-input me-3" type="radio" id="radioRecordarme">
-                        <label class="form-check-label" for="labelTerminos">Acepto los terminos y condiciones</label>
+<!-- Column left -->
+        <div class="col-lg-6 d-none d-lg-flex">
+            <!-- Fondo -->
+            <div class="img-left w-100">
+                <!-- texto -->
+                <div class="contenedor-texto-img">
+                    <img class="c1" src="assets/img/comilla1.svg" alt="">
+                    <div class="textos-img">
+                        <span>La privacidad ante todo.</span>
+                        <h2>~ Equipo FotoAD</h2>
                     </div>
+                    <img class="c2" src="assets/img/comilla2.svg" alt="">
                 </div>
-                <!-- Login Buttons -->
-                <div>
-                    <button (click)="login()" id="btn-login" type="submit"
-                        class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
-                        Registrar cuenta
-                    </button>
-
-                    <div class="or">
-                        <hr>
-                        <p class="or"> O </p>
-                        <hr>
-                    </div>
-                    <button (click)="loginGG()" id="btn-login-g" type="submit"
-                        class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
-                        <img src="assets/img/iconfinder_Google.png" class="lead me-2 d-none d-sm-inline">
-                        Registrate con Google
-                    </button>
-                </div>
-            </form>
+            </div>
         </div>
+
+
+<!-- Column right -->
+        <div class="col-lg-6 d-flex flex-column align-items-center min-vh-100">
+            
+            <div class="px-lg-5 px-md-5 pt-lg-5 pt-sm-5 p-4 w-100 mb-auto headfooter">
+                <button [routerLink]="['/']" class="btn btn-outline-secondary p-0 btnRegresar">
+                    <i class="fas fa-chevron-left me-2"></i>Regresar
+                </button>
+            </div>
+                
+<!-- Register -->
+            <div class="px-lg-6 py-lg-2 p-4 align-self-center mx-auto content-registro">
+
+                <h1 class="h1registrar text-center">Registrar nueva cuenta!</h1>
+                <h2 class="comparte">Comparte, Explora y Apoya.</h2>
+    
+                <div class="hr"></div>
+    
+                <form action="#" 
+                      method="post" 
+                      [formGroup]="miFormulario" 
+                      (ngSubmit)="register()">
+                    <div class="mb-3" id="name">
+                        <label for="labelEmail" class="form-label"> Nombre de usuario* </label>
+                        <input formControlName="name" 
+                               type="text" 
+                               class="form-control" 
+                               placeholder="Ingrese su nombre" 
+                               required>
+                    </div>
+                    <div class="mb-3" id="email">
+                        <label for="labelEmail" class="form-label"> Direccion de correo* </label>
+                        <input formControlName="email" 
+                               type="email" 
+                               class="form-control" 
+                               placeholder="Ingrese su correo"
+                               required>
+                    </div>
+                    <div class="mb-3" id="pass">
+                        <label for="labelPass" class="form-label"> Crear contraseña* </label>
+                        <input formControlName="password" 
+                               type="password" 
+                               class="form-control" 
+                               placeholder="Contraseña"
+                               autocomplete="off" 
+                               required>
+                    </div>
+                    <!-- <div class="mb-0" id="passrepeat">
+                        <label for="labelPass" class="form-label"> Repetir contraseña </label>
+                        <input formControlName="password" type="password" class="form-control" placeholder="Escriba su contraseña nuevamente" 
+                            name="password" autocomplete="off" required>
+                    </div> -->
+<!-- Registro Help -->
+                    <div class="d-flex row justify-content-between" id="rem-forget">
+                        <div class="col-auto p-0 w-100">
+                            <input class="form-check-input" type="checkbox" id="radioRecordarme">
+                            <label class="form-check-label terminos" for="labelTerminos">Acepto los terminos y condiciones</label>
+                        </div>
+                    </div>
+<!-- Registro Buttons -->
+                    <div>
+                        <button id="btn-login" 
+                                type="submit" 
+                                [disabled]="miFormulario.invalid"
+                                class="btn btn-outline-light w-100 border-0 p-2">
+                            Registrar cuenta
+                        </button>
+                    
+                        <div class="or">
+                            <div class="lineOR"></div>
+                                <p class="o"> O </p>
+                            <div class="lineOR"></div>
+                        </div>
+                        <button (click)="loginGG()" 
+                                id="btn-login-g" 
+                                type="button"
+                                class="btn btn-outline-light w-100 border-0 p-2 text-center">
+                            <img src="assets/img/googleicon-gg.svg" class="img-gg position-absolute">
+                            Registrate con Google
+                        </button>
+                    </div>
+                </form>
+            </div>
+<!-- Footer -->
+            <div class="px-lg-6 py-lg-4 p-4 text-center w-100 mt-auto headfooter">
+
+            </div>
+        </div>
+
+
     </div>
 </section>
