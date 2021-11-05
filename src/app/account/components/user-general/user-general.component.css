@@ -1,0 +1,75 @@
+
+h1 {
+    font-size: 48px;
+    padding-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #dedede;
+}
+
+td {
+    padding: 16px 16px 16px 0;
+}
+
+.content-button {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.button {
+    box-sizing: border-box;
+    padding: 13px 48px;
+    font-size: 14px;
+    background-color: transparent;
+    border-radius: 500px;
+    display: inline-block;
+    border: 1px solid var(--bluedeep);
+    text-decoration: none;
+    color: var(--bluedeep);
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+
+    transition: all .3s ease;
+}
+
+.button:hover {
+    background: var(--bluedeep);
+    border: 1px solid var(--bluedeep);
+    color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content-button {
+        display: block;
+        text-align: right;
+    }
+}

@@ -1,0 +1,49 @@
+<div>
+    <h1 class="fw-bold m-0">Editar perfil</h1>
+</div>
+<article>
+    <section>
+        <form action="" method="post">
+            <section class="content">
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail">
+                </div>
+                <div class="mb-3">
+                    <fieldset disabled>
+                        <label for="inputPassword" class="form-label disable">Contraseña</label>
+                        <input type="password" class="form-control" id="inputPassword"
+                            placeholder="">
+                    </fieldset>
+                </div>
+                <div class="mb-3">
+                    <label for="labelGenero" class="form-label">Genero</label>
+                    <select id="inputGroupSelect" class="form-select">
+                        <option value="1">Hombre</option>
+                        <option value="2">Mujer</option>
+                        <option value="3">No binario</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="inputCity" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="start" value="2021-01-01" min="1900-01-01"
+                        max="2021-12-31">
+                </div>
+                <div class="mb-3">
+                    <label for="labelPaisRegion" class="form-label">País o región</label>
+                    <select id="inputGroupSelect" class="form-select">
+                        <option selected>México</option>
+                    </select>
+                </div>
+            </section>
+            <div class="content-button">
+                <a href="/account/overview/" class="buttonCancelar">
+                    Cancelar
+                </a>
+                <a href="/account/overview/" class="buttonGuardar">
+                    Guardar perfil
+                </a>
+            </div>
+        </form>
+    </section>
+</article>

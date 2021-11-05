@@ -8,10 +8,14 @@ const routes: Routes = [
         loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
     },
     {
-        path: 'pages',
+        path: 'account',
+        loadChildren: () => import('./account/account.module').then( m => m.AccountModule )
+    },
+    {
+        path: '',
         loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule ),
-        canActivate: [ ValidarTokenGuard ],
-        canLoad: [ ValidarTokenGuard ]
+        // canActivate: [ ValidarTokenGuard ],
+        // canLoad: [ ValidarTokenGuard ]
     },
     {
         path: '**',

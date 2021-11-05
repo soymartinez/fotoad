@@ -1,0 +1,39 @@
+<div id="Navbar">
+    <app-navbar></app-navbar>
+</div>
+
+<div class="box-main">
+    <div class="container-lg p-0">
+        <div class="box-sidebar d-none d-md-block">
+            <div class="sidebar-content">
+                <img src="./assets/img/perfil-img.jpg" alt="photo-perfil" class="img-fluid rounded-circle" id="photo-perfil"
+                    width="64" height="64">
+                <ul class="p-0" id="menu-list">
+                    <li class="menu-item" id="overview">
+                        <a href="/account/overview"><i class="fas fa-home d-none d-lg-block"></i>
+                            Vista general de la cuenta
+                        </a>
+                    </li>
+                    <li class="menu-item" id="profile">
+                        <a href="/account/profile"><i class="fas fa-pen d-none d-lg-block"></i>
+                            Editar perfil
+                        </a>
+                    </li>
+                    <li class="menu-item" id="change-password">
+                        <a href="/account/change-password"><i class="fas fa-lock d-none d-lg-block"></i>
+                            Cambiar contraseña
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-contenido">
+            <div class="contenido-content my-lg-0">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="Footer">
+    <app-footer></app-footer>
+</div>

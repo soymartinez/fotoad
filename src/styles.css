@@ -5,6 +5,15 @@
     --light: #ffffff;
 }
 
+.txt-gris { color: #616161; }
+.txt-bluedeep { color: var(--bluedeep); }
+.txt-atardecer { color: var(--atardecer); }
+.place-holder { font: var(--placeholder); }
+.bg-atardecer { background-color: var(--atardecer); }
+.bg-bluedeep { background-color: var(--bluedeep); }
+.bg-light { background-color: #fff !important;  }
+.txt-hover { color: #b3b3b3; }
+
 * {
     margin: 0;
     padding: 0;

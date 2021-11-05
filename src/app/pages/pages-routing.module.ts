@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+
 import { HomeComponent } from './components/home/home.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ExploreComponent } from './components/explore/explore.component';
-import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: LandingPageComponent,
     children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'categories', component: CategoriesComponent },
-      { path: 'explore', component: ExploreComponent },
-      { path: 'user', component: UserComponent },
-      { path: '**', redirectTo: 'home' },
+      { path: '', component: HomeComponent },
+      { path: 'categorias', component: CategoriesComponent },
+      { path: 'explorar', component: ExploreComponent },
+      { path: '**', redirectTo: '' },
     ]
   }
 ];

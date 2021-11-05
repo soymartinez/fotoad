@@ -1,0 +1,103 @@
+
+h1 {
+    font-size: 48px;
+    padding-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+.content {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #dedede;
+}
+
+td {
+    padding: 16px 16px 16px 0;
+}
+
+input,
+select {
+    height: 52px;
+}
+
+.content-button {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.buttonGuardar {
+    box-sizing: border-box;
+    padding: 13px 48px;
+    font-size: 14px;
+    background-color: transparent;
+    border-radius: 500px;
+    display: inline-block;
+    border: 1px solid var(--bluedeep);
+    text-decoration: none;
+    color: var(--bluedeep);
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+
+    transition: all .3s ease;
+}
+.buttonGuardar:hover {
+    background: var(--bluedeep);
+    border: 1px solid var(--bluedeep);
+    color: #fff;
+}
+
+.buttonCancelar {
+    padding: 13px 30px;
+    font-size: 14px;
+    background-color: transparent;
+    border-radius: 500px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--placeholder);
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+
+    transition: all .3s ease;
+}
+.buttonCancelar:hover {
+    color: var(--bluedeep);
+}
+
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content-button {
+        display: block;
+        text-align: right;
+    }
+}
