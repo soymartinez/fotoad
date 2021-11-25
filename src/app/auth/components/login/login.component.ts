@@ -36,26 +36,28 @@ export class LoginComponent implements OnInit {
 
   // Login con correo electronico
   login() {
+    this.router.navigateByUrl('/');
     // console.log(this.miFormulario.value);
-    const { email, password } = this.miFormulario.value;
+    // const { email, password } = this.miFormulario.value;
     
-    // Validación de usaurio con el "ok": true
-    this.authService.login( email, password )
-      .subscribe( ok => {
+    // // Validación de usaurio con el "ok": true
+    // this.authService.login( email, password )
+    //   .subscribe( ok => {
+
         
-        if ( ok === true ) {
-          this.router.navigateByUrl('/pages/home')
-        } else {
-          Swal.fire({
-            icon: 'error',
-            iconColor: '#D36B43',
-            title: 'Error',
-            text: ok,
-            width: '22rem',
-            confirmButtonColor: '#D36B43'
-          })
-        }
-      })
+    //     // if ( ok === true ) {
+    //     //   this.router.navigateByUrl('/pages/home')
+    //     // } else {
+    //     //   Swal.fire({
+    //     //     icon: 'error',
+    //     //     iconColor: '#D36B43',
+    //     //     title: 'Error',
+    //     //     text: ok,
+    //     //     width: '22rem',
+    //     //     confirmButtonColor: '#D36B43'
+    //     //   })
+    //     // }
+    //   })
   }
 
   // Login con Google

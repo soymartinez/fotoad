@@ -1,0 +1,10 @@
+<form>
+    <div class="custom-file text-center rounded">
+            <input class="d-none" id="file-input" type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" />
+            <label class="text-primary p-4" for="file-input">Sube tu fotosa! <i class="fas fa-cloud-upload-alt"></i></label>
+    </div>
+    
+    <div *ngFor="let imagen of imagenes" class="content-images">
+        <img [src]="imagen" alt="" srcset="">
+    </div>
+</form>

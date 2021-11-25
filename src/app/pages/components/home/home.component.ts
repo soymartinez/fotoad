@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  imagenes: any[] = [];
+
   // Cerra sesión
   cerrarSesion(): void {
     this.authService.signOut();

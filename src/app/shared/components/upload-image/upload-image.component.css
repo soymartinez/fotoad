@@ -1,0 +1,5 @@
+.content-images img {
+    display: flex;
+    width: 100px;
+    border-radius: 10px;
+}
