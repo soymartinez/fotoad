@@ -38,7 +38,7 @@
                             <label class="form-check-label" for="labelRecordarme">Recordarme</label>
                         </div>
                         <div class="col-auto">
-                            <a href="#" id="passlost" class="form-text text-muted text-decoration-none">¿Olvido la contraseña?</a>
+                            <a routerLink="/auth/login" id="passlost" class="form-text text-muted text-decoration-none">¿Olvido la contraseña?</a>
                         </div>
                     </div>
 <!-- Login Buttons -->
@@ -56,7 +56,7 @@
 <!-- Footer -->
             <div class="px-lg-6 pt-lg-5 pb-lg-5 p-5 mb-5 text-center w-100 mt-auto" id="registrar">
                 <p class="d-inline-block txt-gris mb-0">¿No tienes cuenta?</p> 
-                <a [routerLink]="['/auth/signup']" class="txt-bluedeep text-decoration-none"> Registrate ahora</a>
+                <a routerLink="/auth/signup" class="txt-bluedeep text-decoration-none"> Registrate ahora</a>
             </div>
         </div>
         

@@ -26,12 +26,24 @@ button[aria-expanded = true] {
 
 a {
     color: var( --bluedeep ) !important;
+    color: var( --placeholder ) !important;
     transition: .3s !important;
 }
 
+.navbar-brand {
+    color: var( --bluedeep ) !important;
+}
+
+.dropdown-menu li a:hover,
 .nav-link:hover,
-.nav-link:active {
-    color: var(--placeholder) !important;
+.active {
+    font-weight: bold;
+    color: var( --bluedeep ) !important;
+}
+
+.dropdown {
+    color: var( --bluedeep ) !important;
+    font-weight: bold;
 }
 
 .nav-separador {

@@ -4,6 +4,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UploadImageComponent } from './components/upload-image/upload-image.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +16,8 @@ import { UploadImageComponent } from './components/upload-image/upload-image.com
     UploadImageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FooterComponent,
