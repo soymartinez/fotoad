@@ -15,4 +15,8 @@ export class NavbarComponent implements OnInit {
 
   nombreUsuario = 'Alvaro Martinez'
 
+  cerrarSesion() {
+    this.authService.logout();
+  }
+
 }
