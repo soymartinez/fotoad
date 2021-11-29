@@ -36,30 +36,30 @@
     
                 <div class="hr"></div>
     
-                <form action="#" 
-                      method="post" 
-                      [formGroup]="miFormulario" 
-                      (ngSubmit)="register()">
+                <form (ngSubmit)="register()">
                     <div class="mb-3" id="name">
                         <label for="labelEmail" class="form-label"> Nombre de usuario* </label>
-                        <input formControlName="name" 
-                               type="text" 
+                        <input type="text"
+                               name="name"
+                               [(ngModel)]="credenciales.name"
                                class="form-control" 
                                placeholder="Ingrese su nombre" 
                                required>
-                    </div>
-                    <div class="mb-3" id="email">
+                            </div>
+                            <div class="mb-3" id="email">
                         <label for="labelEmail" class="form-label"> Direccion de correo* </label>
-                        <input formControlName="email" 
-                               type="email" 
+                        <input type="email"
+                               name="email"
+                               [(ngModel)]="credenciales.email"
                                class="form-control" 
                                placeholder="Ingrese su correo"
                                required>
                     </div>
                     <div class="mb-3" id="pass">
                         <label for="labelPass" class="form-label"> Crear contraseña* </label>
-                        <input formControlName="password" 
-                               type="password" 
+                        <input type="password"
+                               name="password"
+                               [(ngModel)]="credenciales.password"
                                class="form-control" 
                                placeholder="Contraseña"
                                autocomplete="off" 
@@ -80,8 +80,7 @@
 <!-- Registro Buttons -->
                     <div>
                         <button id="btn-login" 
-                                type="submit" 
-                                [disabled]="miFormulario.invalid"
+                                type="submit"
                                 class="btn btn-outline-light w-100 border-0 p-2">
                             Registrar cuenta
                         </button>
@@ -91,7 +90,7 @@
                                 <p class="o"> O </p>
                             <div class="lineOR"></div>
                         </div>
-                        <button (click)="loginGG()" 
+                        <button (click)="googleRegister()" 
                                 id="btn-login-g" 
                                 type="button"
                                 class="btn btn-outline-light w-100 border-0 p-2 text-center">

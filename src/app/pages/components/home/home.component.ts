@@ -13,8 +13,7 @@ export class HomeComponent implements OnInit {
     return this.authService.usuario;
   }
 
-  constructor( private authService: AuthService,
-               private router: Router ) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -23,10 +22,7 @@ export class HomeComponent implements OnInit {
 
   // Cerra sesión
   cerrarSesion(): void {
-    this.authService.signOut();
     this.authService.logout();
-
-    this.router.navigateByUrl('/auth/login')
   }
 
 }

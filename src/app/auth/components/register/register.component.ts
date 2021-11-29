@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { UxService } from 'src/app/service/ux.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,26 +9,25 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {  
 
-  constructor( private fb: FormBuilder,
-               private router: Router ) { }
+  constructor(private authService: AuthService,
+              private uxService: UxService) { }
 
   ngOnInit(): void {
   }
 
-  miFormulario: FormGroup = this.fb.group({
-    name:    ['Test1', [Validators.required]],
-    email:    ['test1@test.com', [Validators.required, Validators.email]],
-    password: ['123456', [Validators.required, Validators.minLength(6)]],
-  }) 
-
+  credenciales = {
+    name: '',
+    email: '',
+    password: ''
+  }
+  
+  
   register() {
-    console.log(this.miFormulario.value);
-
-    this.router.navigateByUrl('auth/login')
+    this.authService.register(this.credenciales.name, this.credenciales.email, this.credenciales.password);
   }
 
-  loginGG() {
-    
+  googleRegister() {
+    this.authService.googleLogin();
   }
-
+  
 }

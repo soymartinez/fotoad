@@ -20,16 +20,16 @@
 <!-- Login -->
             <div class="px-lg-6 py-lg-5 p-4 align-self-center">
                 <h1 class="fw-bold text-center inciar-sesion-txt">Inicio de sesión</h1>
-                <form action="#" method="post" [formGroup]="miFormulario" (ngSubmit)="login()">
+                <form action="#" method="post" (ngSubmit)="login()">
                     <div class="mb-3" id="email">
                         <label for="labelEmail" class="form-label"> Correo electrónico</label>
-                        <input formControlName="email" type="email" class="form-control" placeholder="Ingrese su correo electrónico" name="email" required>
+                        <input [(ngModel)]="credenciales.email" type="email" class="form-control" placeholder="Ingrese su correo electrónico" name="email" required>
                         
                         <div id="emailInfo" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
                     </div>
                     <div class="mb-0" id="pass">
                         <label for="labelPass" class="form-label"> Contraseña </label>
-                        <input formControlName="password" type="password" class="form-control" placeholder="Ingrese su contraseña" name="password" autocomplete="off" required>
+                        <input [(ngModel)]="credenciales.password" type="password" class="form-control" placeholder="Ingrese su contraseña" name="password" autocomplete="off" required>
                     </div>
 <!-- Login Help -->
                     <div class="d-flex row justify-content-between pb-4 pt-4 fs-6" id="rem-forget">
@@ -43,10 +43,10 @@
                     </div>
 <!-- Login Buttons -->
                     <div>
-                        <button id="btn-login" type="submit" [disabled]="miFormulario.invalid" class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
+                        <button id="btn-login" type="submit" class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
                             Iniciar sesión
                         </button>
-                        <button (click)="loginGoogle()" id="btn-login-g" type="button" class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
+                        <button (click)="googleLogin()" id="btn-login-g" type="button" class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
                             <img src="assets/img/googleicon-gg.svg" class="me-2 d-none d-sm-inline">
                             Inicia sesión con google
                         </button>

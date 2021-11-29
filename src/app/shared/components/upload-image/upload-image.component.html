@@ -1,10 +1,55 @@
 <form>
-    <div class="custom-file text-center rounded">
-            <input class="d-none" id="file-input" type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" />
-            <label class="text-primary p-4" for="file-input">Sube tu fotosa! <i class="fas fa-cloud-upload-alt"></i></label>
+    <h3 class="fw-bold pb-4 m-0">Nueva foto</h3>
+    <div class="upload text-center rounded pb-4" *ngIf="!nuevaFoto.nombre">
+        <input class="d-none" id="file-upload" type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" />
+        <label *ngIf="!nuevaFoto.nombre" class="text-primary p-4" id="file-upload" for="file-upload"><i class="fas fa-cloud-upload-alt fa-3x"></i></label>
+        <label *ngIf="!cargarImagen" class="p-4 d-flex align-content-center justify-content-center" id="file-delete"><i class="fas fa-trash-alt"></i></label>
     </div>
-    
-    <div *ngFor="let imagen of imagenes" class="content-images">
+
+    <div *ngFor="let imagen of imagenes" class="pre-visualization pb-4">
         <img [src]="imagen" alt="" srcset="">
     </div>
+
+    <article>
+        <section>
+            <table class="w-100">
+                <tbody>
+                    <tr>
+                        <td class="txt-hover">Nombre de imagen</td>
+                        <td class="text-end text-xl-start">{{ nuevaFoto.nombre }}</td>
+                    </tr>
+                    <tr>
+                        <td class="txt-hover">Descripción</td>
+                        <td class="text-end text-xl-start">
+                            <textarea class="form-control" name="descripcion" ngDefaultControl [(ngModel)]="nuevaFoto.descripcion" rows="2"></textarea>
+                            <!-- <input type="text" [(ngModel)]="nuevaFoto.descripcion" placeholder=""> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-hover">Albumes</td>
+                        <td class="text-end text-xl-start">
+                            <select name="albumes" class="form-select" >
+                                <option [ngValue]="albumes" name="album" *ngFor="let album of albumes;">{{ album }}</option>
+                                <!-- {{a}} -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt-hover">Visibilidad</td>
+                        <td class="text-end text-xl-start">
+                            <select class="form-select">
+                                <option value="1">Público</option>
+                                <option value="2">Privado</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
 </form>
+<div class="content-button">
+    <a routerLink="/" class="button">
+        Publicar
+    </a>
+</div>

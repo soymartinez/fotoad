@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { Imagenes, Album } from '../../../../models/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class StorageService {
 
   constructor(private storage: AngularFireStorage) { }
   
-  imagenes: any[] = []
+  imagenes: Imagenes[] = []
 
   async subirImagen(nombre: string, base64: any) {
     try {
@@ -19,5 +20,9 @@ export class StorageService {
       return null;
     }
   }
+
+  // nuevoAlbum(): Album {
+  //   this.lista.push()
+  // }
 
 }
