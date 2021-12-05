@@ -32,10 +32,10 @@
 
 // }
 
-// Modificacion de data.service, creado y guardado automatico directo desde firestore
 import { Injectable } from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/compat/firestore';
 import {SubirImagen} from "../models/interface";
+import {StorageService} from "../shared/components/upload-image/services/storage.service";
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +43,7 @@ import {SubirImagen} from "../models/interface";
 export class DataService {
   private publicationsCollection: AngularFirestoreCollection<SubirImagen>;
 
-  constructor(private dataFirebase: AngularFirestore) {
+  constructor(private dataFirebase: AngularFirestore, private imagenes:StorageService){
     this.publicationsCollection = dataFirebase.collection<SubirImagen>('categorias');
   }
 
@@ -57,7 +57,12 @@ export class DataService {
     return this.publicationsCollection.doc(documentId).set(publicacion);
   }
 
-  borrarPublicacion(documentId: string) {
-    return this.publicationsCollection.doc(documentId).delete();
+  borrarPublicacion(documentId: string,imagenURL:string) {
+    return this.publicationsCollection.doc(documentId).delete().then( value => {
+        this.imagenes.borrarImagen(imagenURL)
+      }
+    );
+
   }
 }
+
