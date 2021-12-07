@@ -1,7 +1,7 @@
 
 /* image-left */
 .flex-center {
-    background-image: url(src\assets\img\bg-left.png);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fotoad.appspot.com/o/FOTOAD_IMG%2Fbg-left.png?alt=media&token=2dfbf0ab-d692-4f95-9a7d-94cbf13cb5d7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,8 +58,12 @@
     font-size: 16px;
 }
 
+#passlost {
+    font-size: 15px;
+}
+
 #btn-login,
-#btn-login-g {
+#btn-google {
     padding: 13px !important;
     border-radius: 5px;
 }
@@ -69,7 +73,7 @@
     background-color: #e07347;
     transition: .4s;
 }
-#btn-login-g:hover {
+#btn-google:hover {
     color: white;
     background-color: #1c4b5c;
     transition: .4s;
@@ -78,14 +82,4 @@
 #registrar a:hover {
     color: #3b697a;
     transition: .4s;
-}
-
-
-.alert-text {
-    font-size: 10px;
-    color: #1c4b5c !important; 
-}
-
-.pp {
-    background: #1c4b5c !important;
 }

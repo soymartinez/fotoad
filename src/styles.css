@@ -24,3 +24,13 @@ body {
     font-weight: 400;
     color: var(--bluedeep);
 }
+
+.toast-success {
+    --background: #3880ff80;
+    color: #fff;
+}
+
+.toast-terror {
+    --background: #eb445a80;
+    color: #fff;
+}

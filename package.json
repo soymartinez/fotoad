@@ -25,6 +25,8 @@
     "angularx-social-login": "^4.0.1",
     "bootstrap": "^5.1.1",
     "firebase": "^9.5.0",
+    "ionicons": "^6.0.0",
+    "rxfire": "^6.0.3",
     "rxjs": "~6.6.0",
     "sweetalert2": "^11.1.9",
     "tslib": "^2.3.0",

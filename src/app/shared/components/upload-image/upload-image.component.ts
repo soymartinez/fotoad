@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { StorageService } from './services/storage.service';
 import { SubirImagen } from '../../../models/interface';
 import { UxService } from 'src/app/service/ux.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-upload-image',

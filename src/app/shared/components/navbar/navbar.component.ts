@@ -11,12 +11,18 @@ export class NavbarComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
+    this.authService.fireAuth.user
+      .subscribe((user) => {
+        this.name = user?.displayName
+        this.photo = user?.photoURL
+      })
   }
-
-  nombreUsuario = 'Alvaro Martinez'
 
   cerrarSesion() {
     this.authService.logout();
   }
 
+  name: any
+  photo: any
+  
 }

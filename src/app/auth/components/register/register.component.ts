@@ -9,8 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class RegisterComponent implements OnInit {  
 
-  constructor(private authService: AuthService,
-              private uxService: UxService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -21,9 +20,12 @@ export class RegisterComponent implements OnInit {
     password: ''
   }
   
+  form = {
+    checkbox: false
+  }
   
-  register() {
-    this.authService.register(this.credenciales.name, this.credenciales.email, this.credenciales.password);
+  register() {    
+    this.authService.register(this.credenciales.name, this.credenciales.email, this.credenciales.password, this.form.checkbox);
   }
 
   googleRegister() {

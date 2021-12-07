@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../auth/services/auth.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +14,11 @@ export class HomeComponent implements OnInit {
     return this.authService.usuario;
   }
 
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
   imagenes: any[] = [];
-
-  // Cerra sesión
-  cerrarSesion(): void {
-    this.authService.logout();
-  }
 
 }

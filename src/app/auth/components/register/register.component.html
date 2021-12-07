@@ -21,17 +21,14 @@
 
 <!-- Column right -->
         <div class="col-lg-6 d-flex flex-column align-items-center min-vh-100">
-            
-            <div class="px-lg-5 px-md-5 pt-lg-5 pt-sm-5 p-4 w-100 mb-auto headfooter">
-                <button routerLink="/auth/login" class="btn btn-outline-secondary p-0 btnRegresar">
-                    <i class="fas fa-chevron-left me-2"></i>Regresar
-                </button>
+            <div class="px-lg-6 pt-lg-5 pb-lg-3 p-5 mt-5 text-center w-100 mb-auto" id="bienvenido">
+                <p class="m-0">Bienvenido a FotoAD</p>
             </div>
                 
 <!-- Register -->
             <div class="px-lg-6 py-lg-2 p-4 align-self-center mx-auto content-registro">
 
-                <h1 class="h1registrar text-center">Registrar nueva cuenta!</h1>
+                <h1 class="h1registrar text-center">Registrar nueva cuenta</h1>
                 <h2 class="comparte">Comparte, Explora y Apoya.</h2>
     
                 <div class="hr"></div>
@@ -54,8 +51,9 @@
                                class="form-control" 
                                placeholder="Ingrese su correo"
                                required>
+                        <div id="emailInfo" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
                     </div>
-                    <div class="mb-3" id="pass">
+                    <div class="" id="pass">
                         <label for="labelPass" class="form-label"> Crear contraseña* </label>
                         <input type="password"
                                name="password"
@@ -65,23 +63,18 @@
                                autocomplete="off" 
                                required>
                     </div>
-                    <!-- <div class="mb-0" id="passrepeat">
-                        <label for="labelPass" class="form-label"> Repetir contraseña </label>
-                        <input formControlName="password" type="password" class="form-control" placeholder="Escriba su contraseña nuevamente" 
-                            name="password" autocomplete="off" required>
-                    </div> -->
 <!-- Registro Help -->
-                    <div class="d-flex row justify-content-between" id="rem-forget">
-                        <div class="col-auto p-0 w-100">
-                            <input class="form-check-input" type="checkbox" id="radioRecordarme">
+                    <div class="d-flex row justify-content-between pb-4 pt-4 fs-6" id="terminos">
+                        <div class="col-auto">
+                            <input class="form-check-input me-2" name="terminos" [(ngModel)]="form.checkbox" type="checkbox" id="radioRecordarme">
                             <label class="form-check-label terminos" for="labelTerminos">Acepto los terminos y condiciones</label>
                         </div>
                     </div>
 <!-- Registro Buttons -->
                     <div>
-                        <button id="btn-login" 
+                        <button id="btn-registrar" 
                                 type="submit"
-                                class="btn btn-outline-light w-100 border-0 p-2">
+                                class="btn btn-outline-light fw-bold w-100 border-0 p-2">
                             Registrar cuenta
                         </button>
                     
@@ -91,18 +84,19 @@
                             <div class="lineOR"></div>
                         </div>
                         <button (click)="googleRegister()" 
-                                id="btn-login-g" 
+                                id="btn-google" 
                                 type="button"
-                                class="btn btn-outline-light w-100 border-0 p-2 text-center">
-                            <img src="assets/img/googleicon-gg.svg" class="img-gg position-absolute">
+                                class="btn btn-outline-light fw-bold w-100 border-0 p-2">
+                            <i class="fab fa-google lead me-2"></i>
                             Registrate con Google
                         </button>
                     </div>
                 </form>
             </div>
 <!-- Footer -->
-            <div class="px-lg-6 p-3 text-center w-100 mt-auto headfooter">
-
+            <div class="px-lg-6 pt-lg-3 pb-lg-5 p-5 mb-5 text-center w-100 mt-auto" id="login">
+                <p class="d-inline-block txt-gris mb-0">¿Ya tienes cuenta?</p> 
+                <a routerLink="/auth/login" class="txt-bluedeep text-decoration-none"> Inicia sesión</a>
             </div>
         </div>
 

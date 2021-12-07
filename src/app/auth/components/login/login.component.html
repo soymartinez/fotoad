@@ -23,31 +23,31 @@
                 <form action="#" method="post" (ngSubmit)="login()">
                     <div class="mb-3" id="email">
                         <label for="labelEmail" class="form-label"> Correo electrónico</label>
-                        <input [(ngModel)]="credenciales.email" type="email" class="form-control" placeholder="Ingrese su correo electrónico" name="email" required>
+                        <input [(ngModel)]="email" type="email" class="form-control" placeholder="Ingrese su correo electrónico" name="email" required>
                         
                         <div id="emailInfo" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
                     </div>
                     <div class="mb-0" id="pass">
                         <label for="labelPass" class="form-label"> Contraseña </label>
-                        <input [(ngModel)]="credenciales.password" type="password" class="form-control" placeholder="Ingrese su contraseña" name="password" autocomplete="off" required>
+                        <input [(ngModel)]="password" type="password" class="form-control" placeholder="Ingrese su contraseña" name="password" autocomplete="off" required>
                     </div>
 <!-- Login Help -->
                     <div class="d-flex row justify-content-between pb-4 pt-4 fs-6" id="rem-forget">
                         <div class="col-auto">
-                            <input class="form-check-input me-2" type="checkbox" id="radioRecordarme">
+                            <input class="form-check-input me-2" name="recordarme" [(ngModel)]="form.recordarUser" type="checkbox" id="radioRecordarme">
                             <label class="form-check-label" for="labelRecordarme">Recordarme</label>
                         </div>
                         <div class="col-auto">
-                            <a routerLink="/auth/login" id="passlost" class="form-text text-muted text-decoration-none">¿Olvido la contraseña?</a>
+                            <a routerLink="/auth/password_reset" id="passlost" class="form-text text-muted text-decoration-none ">¿Olvido la contraseña?</a>
                         </div>
                     </div>
 <!-- Login Buttons -->
                     <div>
-                        <button id="btn-login" type="submit" class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
+                        <button (click)="login()" id="btn-login" type="submit" class="btn btn-outline-light fw-bold bg-atardecer w-100 border-0 p-2 mb-3">
                             Iniciar sesión
                         </button>
-                        <button (click)="googleLogin()" id="btn-login-g" type="button" class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
-                            <img src="assets/img/googleicon-gg.svg" class="me-2 d-none d-sm-inline">
+                        <button (click)="googleLogin()" id="btn-google" type="button" class="btn btn-outline-light fw-bold bg-bluedeep w-100 border-0 p-2">
+                            <i class="fab fa-google lead me-2"></i>
                             Inicia sesión con google
                         </button>
                     </div>

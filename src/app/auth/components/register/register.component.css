@@ -1,7 +1,6 @@
-
 /* image-left */
 .img-left {
-    background-image: url(src\assets\img\image-leftregister.png);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fotoad.appspot.com/o/FOTOAD_IMG%2Fimage-leftregister.png?alt=media&token=0f461154-a460-4fbb-82e4-e2d326aa752c);
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,19 +34,9 @@
     align-self: flex-start;
     width: 28px;
     margin: 0 9px;
-    /* top: -7px; */
 }
 
 
-
-
-
-.headfooter {
-    display: flex;
-    margin: 0px;
-    position: relative;
-    align-items: center;
-}
 
 .btnRegresar {
     border: none;
@@ -60,112 +49,60 @@
     color: #8692a6b0;
 }
 
-
-.content-registro {
-    width: 30rem;
-}
-
 .h1registrar {
     font-weight: bold;
     font-size: 30px;
-    text-align: center;
-    margin-bottom: 19px;
+    margin-bottom: 27px;
 }
+
 .comparte {
     text-align: center;
     width: 100%;
     margin: 0;
     font-size: 18px;
     color: var(--placeholder);
-}
-.hr {
-    width: 100%;
-    border: 0.5px solid #F5F5F5;
-    margin: 35px 0 16px 0;
+    margin-bottom: 27px;
 }
 
-form label {
+#name input::placeholder,
+#email input::placeholder,
+#pass input::placeholder {
+    font-size: 14px;
+    color: var(--placeholder);
+}
+
+#name input,
+#email input,
+#pass input {
+    height: 50px;
+}
+
+#emailInfo {
+    color: var(--placeholder);
+}
+
+#name label,
+#email label,
+#pass label {
     font-size: 16px;
-    color: var(--bluedeep);
-    font-weight: 500;
-    margin-bottom: 14px;
-}
-form .form-control {
-    /* width: 426px; */
-    /* width: 30rem; */
-    height: 64px;
-    padding: 0 30px;
-    margin-bottom: 24px;
-
-    border: 1px solid #8692A6;
-    box-sizing: border-box;
-    border-radius: 6px;
 }
 
-form input {
-    font-size: 14px;
-}
-form input::placeholder {
-    margin-left: 30px;
-    font-size: 14px;
-}
-
-#rem-forget {
-    margin: 32px 0 39px;
-    padding: 0px;
-}
-
-#rem-forget label {
+#terminos label {
     margin: 0px;
-    margin-left: 16px;
-}
-
-#btn-login {
-    height: 64px;
-    /* width: 426px; */
-    width: 100%;
-
-    font-size: 16px;
-    color: white;
-    background: #194352;
-    border-radius: 6px;
-    margin-bottom: 25px;
-}
-
-#btn-login:hover {
-    background-color: #1d4e5f;
-}
-
-.img-gg {
-    margin-left: -83px;
-}
-
-#btn-login-g {
-    height: 64px;
-    /* width: 426px; */
-    width: 100%;
-
-    text-align: start;
-    font-size: 16px;
-    color: black;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-    border-radius: 6px;
-    margin-top: 25px;
-}
-
-#btn-login-g:hover {
-    background-color: #f8f8f8;
 }
 
 
-
-
-
-
-
-
-
+#btn-registrar {
+    background-color: #4a4f5e;
+}
+#btn-google {
+    background-color: #5e7fac;
+}
+#btn-registrar,
+#btn-google {
+    padding: 13px !important;
+    border-radius: 5px;
+}
 
 .or {
     display: flex;
@@ -184,4 +121,20 @@ form input::placeholder {
     border: 0.5px solid #F5F5F5;
     margin: auto auto;
     justify-content: space-between;
+}
+
+#btn-registrar:hover {
+    color: white;
+    background-color: #545a6b;
+    transition: .4s;
+}
+#btn-google:hover {
+    color: white;
+    background-color: #6487b8;
+    transition: .4s;
+}
+
+#login a:hover {
+    color: #3b697a;
+    transition: .4s;
 }

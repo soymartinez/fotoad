@@ -9,20 +9,39 @@ export class UxService {
   constructor(public toastController: ToastController,
               public loadingController: LoadingController) { }
 
-  public loading: any;
+  loading = false;
+
+  async Loading(mensaje: string) {
+
+    return await this.loadingController.create({
+      message: mensaje
+    }).then(a => {
+      a.present().then(() => {
+        if (!this.loading) {
+          a.dismiss()
+        }
+      });
+    });
+  }
+
+  async finishLoading() {
+    this.loading = false;
+    await this.loadingController.dismiss();
+  }
 
   async Toast(mensaje: string, duracion: number) {
     const toast = await this.toastController.create({
       message: mensaje,
       duration: duracion,
-      position: 'top'
+      position: 'top',
+      cssClass:"toast-success",
     });
     toast.present();
   }
 
   async Toasterror(mensaje: string, duracion: number) {
     const toast = await this.toastController.create({
-      color: 'danger',
+      cssClass:"toast-terror",
       message: mensaje,
       duration: duracion,
       position: 'top'
@@ -30,14 +49,4 @@ export class UxService {
     toast.present();
   }
 
-  async Loading(mensaje: string) {
-    this.loading = await this.loadingController.create({
-      message: mensaje
-    });
-    await this.loading.present();
-  }
-
-  async finishLoading() {
-    this.loading.dismiss();
-  }
 }

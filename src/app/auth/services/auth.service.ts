@@ -12,135 +12,124 @@ import { UxService } from '../../service/ux.service';
 })
 export class AuthService {
 
-  usuario = ''
+  usuario: any
 
-  constructor(private fireAuth: AngularFireAuth,
+  constructor(public fireAuth: AngularFireAuth,
     private router: Router,
     public uxService: UxService) { }
 
   login(email: string, password: string) {
-    if (email='') {
-      this.uxService.Toasterror('El correo electrónico y la contraseña son necesarios! 😐', 3000)
-    } else {
-      this.uxService.Loading('Verificando');
-      this.fireAuth.signInWithEmailAndPassword(email, password)
-        .then(() => {
-          console.log('Sesion iniciada!');
-          this.router.navigateByUrl('/');
-          
-          this.uxService.finishLoading();
-          this.uxService.Toast('Bienvenido a FotoAD! 🔥', 3000);
-        })
-        .catch((error) => {
-          this.uxService.finishLoading();
-          this.uxService.Toasterror('No te encontramos en nuestra base de datos 😢', 3000);
-        });
-    }
+    this.uxService.Loading('Verificando');
+    this.fireAuth.signInWithEmailAndPassword(email, password)
+      .then(() => {
+        this.uxService.finishLoading();
+        this.router.navigate(['/']);
+        setTimeout(() => {
+          this.uxService.Toast('Bienvenido a FotoAD! 🔥', 2000);
+        }, 500);
+      })
+      .catch((error) => {
+        this.uxService.finishLoading();
+        if (error.code === "auth/wrong-password") {
+          this.uxService.Toasterror('Contraseña incorrecta 😥', 1500);
+        } else if (error.code === "auth/invalid-email") {
+          this.uxService.Toasterror('Correo electrónico y contraseña son necesarios 😢', 2300);
+        } else if (error.code === "auth/internal-error") {
+          this.uxService.Toasterror('Falta la contraseña  🔑', 1500);
+        } else if (error.code === "auth/user-not-found") {
+          this.uxService.Toasterror('No te encontramos en nuestra base de datos 😢. Regístrate 😎', 3000);
+        } else if (error.code === 'auth/too-many-requests') {
+          this.uxService.Toasterror(`Acceso inhabilitado temporalmente debido a muchos intentos fallidos de inicio de sesión. Restablesca su contraseña o intente más tarde. 😢.`, 9000);
+        }
+      });
   }
 
-  register(nombre: string, email: string, password: string) {
-    this.usuario = nombre;
+  register(nombre: string, email: string, password: string, terminos: boolean) {
     this.uxService.Loading('Registrando');
-    this.fireAuth.createUserWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Registrado', value);
-        this.router.navigateByUrl('/');
-
-        this.uxService.finishLoading();
-        this.uxService.Toast('Registrado en FotoAD, Bienvenido! 😊', 3000);
-      })
-      .catch(() => {
-        this.uxService.finishLoading();
-        this.uxService.Toasterror('Ya estas registrado con estas credenciales 😢', 3000);
-      });
+    if (terminos) {
+      if (!(nombre === '')) {
+        this.fireAuth.createUserWithEmailAndPassword(email, password)
+          .then(value => {
+            console.log('Registrado', value);
+            value.user?.updateProfile({
+              displayName: nombre
+            }).then(() => {
+              this.uxService.finishLoading();
+              this.router.navigateByUrl('/');
+              this.uxService.Toast('Registrado en FotoAD, Bienvenido! 😊', 3000);
+            })
+          })
+          .catch((error) => {
+            this.uxService.finishLoading();
+            if (error.code === "auth/wrong-password") {
+              this.uxService.Toasterror('Contraseña incorrecta 😥', 3000);
+            } else if (error.code === "auth/invalid-email") {
+              this.uxService.Toasterror('Correo electrónico y contraseña son necesarios 😢', 3000);
+            } else if (error.code === 'auth/missing-email') {
+              this.uxService.Toasterror('Falta el correo electrónico 😑', 3000);
+            } else if (error.code === "auth/internal-error") {
+              this.uxService.Toasterror('Falta la contraseña  🔑', 3000);
+            } else if (error.code === 'auth/email-already-in-use') {
+              this.uxService.Toasterror('El correo electrónico ya esta en uso. 😑', 3000);
+            }
+          });
+      } else {
+        this.uxService.Toasterror('Faltan campos por llenar 😑', 2000);
+      }
+    } else {
+      this.uxService.Toasterror('Acepte los terminos y condiciones 👀', 2000);
+    }
   }
 
   googleLogin() {
     this.uxService.Loading('Verificando');
-    return this.provider(new auth.GoogleAuthProvider())
+    this.fireAuth.signInWithPopup(new auth.GoogleAuthProvider())
       .then(() => {
         this.router.navigateByUrl('/');
-
         this.uxService.finishLoading();
-        this.uxService.Toast('Bienvenido a FotoAD! 🔥', 3000);
+        setTimeout(() => {
+          this.uxService.Toast('Bienvenido a FotoAD! 🔥', 2000);
+        }, 500);
       })
-      .catch(() => {
+      .catch((error) => {
         this.uxService.finishLoading();
-        this.uxService.Toasterror('Algo salio mal 😢', 3000);
+        if (error.code === 'auth/popup-closed-by-user') {
+
+        } else {
+          this.uxService.Toasterror('Algo salio mal 😢, reintente de nuevo', 3000);
+        }
+      });
+  }
+
+  resetPassword(email: string) {
+    this.uxService.Loading('Enviando correo de recuperación');
+    this.fireAuth.sendPasswordResetEmail(email)
+      .then(() => {
+        this.uxService.finishLoading();
+        this.uxService.Toast(`Recuperación de contraseña enviada a 👀  ${email}`, 5000);
+        setTimeout(() => {
+          this.router.navigate(['/auth'])
+        }, 4000);
+      })
+      .catch((error) => {
+        this.uxService.finishLoading();
+        if (error.code === 'auth/invalid-email') {
+          this.uxService.Toasterror('Correo electrónico necesario 👻', 3000);
+        } else {
+          this.uxService.Toasterror('No te encontramos en nuestra base de datos 😢', 3000);
+        }
       });
   }
 
   logout() {
     this.uxService.Loading('Saliendo');
     this.fireAuth.signOut().then(() => {
-      this.uxService.finishLoading();
-      this.uxService.Toast('Chaooo! 👋', 3000);
       this.router.navigate(['/auth']);
+      this.uxService.finishLoading();
+      this.uxService.Toast('Chaooo! 👋', 2000);
     }).catch(() => {
       this.uxService.finishLoading();
-      this.uxService.Toasterror('Algo salio mal! 🤔', 3000);
+      this.uxService.Toasterror('Algo salio mal! 🤔', 2000);
     });
   }
-
-  // Proveedores de autenticacion
-  private provider(provider: any) {
-    return this.fireAuth.signInWithPopup(provider)
-      .then(() => {
-        console.log('You have been successfully logged in!')
-      }).catch((error) => {
-        console.log(error)
-      })
-  }
-
-
-  // get usuario() {
-  //   return { ...this._usuario };
-  // }
-  //
-  // Login correo electrónico
-  // login(email: string, password: string) {
-  //   const url = `${this.baseUrl}/auth`;
-  //   const body = { email, password };
-
-  //   return this.http.post<AuthResponse>(url, body)
-  //     .pipe(
-  //       tap(resp => {
-  //         // Validación y almacenamiento de token en LocalStorage
-  //         if (resp.ok) {
-  //           localStorage.setItem('token', resp.token!)
-  //           this._usuario = {
-  //             name: resp.name!,
-  //             uid: resp.uid!
-  //           }
-  //         }
-  //       }),
-  //       map(resp => resp.ok),
-  //       catchError(err => of(err.error.msg))
-  //     )
-  // }
-
-
-  // validarToken(): Observable<boolean> {
-  //   const url = `${this.baseUrl}/auth/renew`;
-  //   const headers = new HttpHeaders()
-  //     .set('x-token', localStorage.getItem('token') || '')
-
-  //   return this.http.get<AuthResponse>(url, { headers })
-  //     .pipe(
-  //       map(resp => {
-  //         localStorage.setItem('token', resp.token!)
-  //         this._usuario = {
-  //           name: resp.name!,
-  //           uid: resp.uid!
-  //         }
-  //         return resp.ok
-  //       }),
-  //       catchError(err => of(false))
-  //     )
-  // }
-
-  // logout() {
-  //   localStorage.removeItem('token');
-  //   // this.googleAuthService.signOut();
-  // }
 }

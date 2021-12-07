@@ -12,21 +12,19 @@ export class LoginComponent implements OnInit {
   
   ngOnInit(): void { }
 
-  credenciales = {
-    name: '',
-    email: '',
-    password: ''
+  name:     string = '';
+  email:    string = '';
+  password: string = '';
+
+  form = {
+    recordarUser: false
   }
 
   login() {
-    this.authService.login(this.credenciales.email, this.credenciales.password);
+    this.authService.login(this.email, this.password);
   }
 
   googleLogin() {
     this.authService.googleLogin();
-  }
-
-  register() {
-    this.authService.register(this.credenciales.name, this.credenciales.email, this.credenciales.password);
   }
 }
