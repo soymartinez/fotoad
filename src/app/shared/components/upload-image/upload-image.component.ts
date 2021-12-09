@@ -59,7 +59,7 @@
 
 // this.router.navigateByUrl('/');
 
-//Modificacion de upload-image.component.ts con cambios de correccion de la vista previa a subir imagen
+//Subida de imagen y modificacion en otras funciones
 import { Component, OnInit } from '@angular/core';
 
 import { StorageService } from './services/storage.service';
@@ -135,6 +135,7 @@ export class UploadImageComponent implements OnInit {
     }
   }
 
+  //funcion nueva
 borrar(idDocument:string,urlImagen:string){
     this.data_base.borrarPublicacion(idDocument,urlImagen).then(value => {
       console.log('se borro correctamente')
