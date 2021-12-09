@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:4000/api',
   firebaseConfig: {
     apiKey: "AIzaSyCgUKjdh8NGofThPwjWHvHi1rWHF_m633Q",
     authDomain: "fotoad.firebaseapp.com",
