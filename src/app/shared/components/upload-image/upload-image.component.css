@@ -1,18 +1,52 @@
-.pre-visualization img {
+.pre-visualization {
+    min-height: 18rem;
+    transition: all .5s;
     display: flex;
-    width: 10rem;
-    border-radius: 10px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(255, 70, 70);
 }
 
-.pre-visualization {
-    min-height: 120px;
+.delete-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #24242452;
 }
+.pre-visualization i {
+    font-size: 1.5rem;
+    transition: all .2s ease;
+}
+
+.pre-visualization i:hover {
+    color: rgb(255, 28, 28);
+}
+
+.pre-visualization img {
+    width: 15rem;
+    border-radius: 10px;
+
+    transition: all .3s;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 18rem;
+
+    transition: all .2s ease;
+}
+
 .upload label {
     font-size: 1rem;
     color: red;
     opacity: 1;
-    transition: all 3s;
 }
 
 h1 {
@@ -59,7 +93,7 @@ td {
     text-align: center;
     align-self: center;
 
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
 
 .button:hover {

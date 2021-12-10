@@ -8,7 +8,7 @@ import { Imagenes, Album } from '../../../../models/interface';
 export class StorageService {
 
   constructor(private storage: AngularFireStorage) { }
-  
+
   imagenes: Imagenes[] = []
 
   async subirImagen(nombre: string, base64: any) {
@@ -21,8 +21,7 @@ export class StorageService {
     }
   }
 
-  // nuevoAlbum(): Album {
-  //   this.lista.push()
-  // }
-
+  borrarImagen(url:string){
+    this.storage.refFromURL(url).delete()
+  }
 }

@@ -1,33 +1,33 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { SubirImagen } from '../models/interface';
+import { StorageService } from '../shared/components/upload-image/services/storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private dataFirebase: AngularFirestore) { }
+  private publicationsCollection: AngularFirestoreCollection<SubirImagen>;
 
-  crearId() {
-    return this.dataFirebase.createId();
+  constructor(private dataFirebase: AngularFirestore, 
+              private imagenes: StorageService) {
+              this.publicationsCollection = this.dataFirebase.collection<SubirImagen>('categorias');
   }
 
-  crearColeccion(data: any, path: string, id: string) {
-    const ref = this.dataFirebase.collection(path);
-    return ref.doc(id).set(data);
+  guardarPublicacion(publicacion: SubirImagen) {
+    return this.publicationsCollection.add(publicacion)
+  }
+  mostrarPublicaciones() {
+    return this.publicationsCollection.snapshotChanges()
+  }
+  actualizarPublicaciones(documentId: string, publicacion: any) {
+    return this.publicationsCollection.doc(documentId).set(publicacion);
   }
 
-  borrarColeccion(data: any, path: string) {
-
+  borrarPublicacion(documentId: string, imagenURL: string) {
+    return this.publicationsCollection.doc(documentId).delete().then(() => {
+      this.imagenes.borrarImagen(imagenURL)
+    });
   }
-
-  getColeccion(path: string) {
-    const ref = this.dataFirebase.collection(path);
-    return ref.valueChanges()
-  }
-
-  editarColeccion() {
-
-  }
-
 }

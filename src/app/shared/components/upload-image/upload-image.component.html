@@ -1,13 +1,15 @@
 <form>
     <h3 class="fw-bold pb-4 m-0">Nueva foto</h3>
-    <div class="upload text-center rounded pb-4" *ngIf="!nuevaFoto.nombre">
+    <div class="upload text-center rounded pb-4" *ngIf="!imagenUrl">
         <input class="d-none" id="file-upload" type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" />
-        <label *ngIf="!nuevaFoto.nombre" class="text-primary p-4" id="file-upload" for="file-upload"><i class="fas fa-cloud-upload-alt fa-3x"></i></label>
-        <label *ngIf="!cargarImagen" class="p-4 d-flex align-content-center justify-content-center" id="file-delete"><i class="fas fa-trash-alt"></i></label>
+        <label class="text-primary p-4" id="file-upload" for="file-upload"><i class="fas fa-cloud-upload-alt fa-3x"></i></label>
     </div>
 
-    <div *ngFor="let imagen of imagenes" class="pre-visualization pb-4">
-        <img [src]="imagen" alt="" srcset="">
+    <div *ngIf="imagenUrl" class="pre-visualization pb-4">
+        <img [src]="imagenUrl" alt="" srcset="">
+        <div class="delete-box" (click)="cambairImagen()">
+            <i class="fas fa-times"></i>
+        </div>
     </div>
 
     <article>
@@ -21,23 +23,21 @@
                     <tr>
                         <td class="txt-hover">Descripción</td>
                         <td class="text-end text-xl-start">
-                            <textarea class="form-control" name="descripcion" ngDefaultControl [(ngModel)]="nuevaFoto.descripcion" rows="2"></textarea>
-                            <!-- <input type="text" [(ngModel)]="nuevaFoto.descripcion" placeholder=""> -->
+                            <textarea #descripcion class="form-control" name="descripcion" ngDefaultControl [(ngModel)]="nuevaFoto.descripcion" rows="2"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td class="txt-hover">Albumes</td>
                         <td class="text-end text-xl-start">
-                            <select name="albumes" class="form-select" >
+                            <select #album name="albumes" class="form-select" >
                                 <option [ngValue]="albumes" name="album" *ngFor="let album of albumes;">{{ album }}</option>
-                                <!-- {{a}} -->
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td class="txt-hover">Visibilidad</td>
                         <td class="text-end text-xl-start">
-                            <select class="form-select">
+                            <select #visibilidad class="form-select">
                                 <option value="1">Público</option>
                                 <option value="2">Privado</option>
                             </select>
@@ -47,13 +47,9 @@
             </table>
         </section>
     </article>
-</form>
-<div class="content-button">
-    <a routerLink="/" class="button">
-        Publicar
+  <div class="content-button">
+    <a (click)="publicar(descripcion.value,album.value,visibilidad.value)" class="button">
+      Publicar
     </a>
-</div>
-
-<!-- <div ngIf="auth.user | async as user">
-    <code>{{auth.user | json}}</code>
-</div> -->
+  </div>
+</form>
