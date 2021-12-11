@@ -27,7 +27,7 @@
 //         .then(() => {
 //           console.log('Sesion iniciada!');
 //           this.router.navigateByUrl('/');
-          
+
 //           this.uxService.finishLoading();
 //           this.uxService.Toast('Bienvenido a FotoAD! 🔥', 3000);
 //         })
@@ -173,8 +173,10 @@ export class AuthService {
     } else {
       this.uxService.Loading('Verificando');
       this.fireAuth.signInWithEmailAndPassword(email, password)
-        .then(() => {
-          localStorage.setItem('usuario', email.slice(0,-10))
+        .then((usuario) => {
+          //UNA VES LOGEADO EL USUARIO CON CORREO Y CONTRASEÑA SE GUARDA EL NOOMBRE DE USUARIO EN EL sessionStorage
+          let usuarioLogeado = <string> usuario.user?.email
+          sessionStorage.setItem('usuario', usuarioLogeado.slice(0,-10))
           console.log('Sesion iniciada!');
           this.router.navigateByUrl('/');
 
@@ -236,9 +238,10 @@ export class AuthService {
   // Proveedores de autenticacion
   private provider(provider: any) {
     return this.fireAuth.signInWithPopup(provider)
-      .then((value) => {
-        let usuario = <string> value.user?.email?.slice(0,-10);
-        localStorage.setItem('usuario',usuario)
+      .then((usuario) => {
+        //UNA VES LOGEADO EL USUARIO CON SU CUENTA DE GOOGLE SE GUARDA EL NOMBRE DE USUARIO EN EL sessionStorage
+        let usuarioLogeado = <string> usuario.user?.email?.slice(0,-10);
+        sessionStorage.setItem('usuario',usuarioLogeado)
         console.log('You have been successfully logged in!')
       }).catch((error) => {
         console.log(error)
