@@ -12,4 +12,14 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nombre: string = 'chanchito feliz';
+
+  // Mi idea era que estas categorias estubieran
+  // En la base de datos y nosotros solo las recorrieramos
+  categorias = [
+    'Amigos',
+    'Deportes',
+    'Familia',
+    'Otros'
+  ]
 }

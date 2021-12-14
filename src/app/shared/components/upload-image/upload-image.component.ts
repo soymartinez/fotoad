@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StorageService } from './services/storage.service';
+import { StorageService } from '../../../service/storage.service';
 import { SubirImagen } from '../../../models/interface';
 import { UxService } from 'src/app/service/ux.service';
 import { DataService } from 'src/app/service/data.service';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-upload-image',
@@ -17,16 +18,21 @@ export class UploadImageComponent implements OnInit {
   imagenUrl: any
   cancelar = false
 
-  albumes: string[] = ['Deporte', 'Familia', 'Escuela', 'Amigos'];
+  // Datos del usuario actual
+  emailUser: string = ''
+  nameUser: string = ''
+
+  albumes: string[] = ['Deporte', 'Familia', 'Amigos', 'Otros'];
   nuevaFoto: SubirImagen = {
     url: '',
     nombre: '',
     descripcion: '',
-    album: '',
+    categoria: '',
     visibilidad: ''
   }
 
-  constructor(private storage: StorageService,
+  constructor(private authService: AuthService,
+              private storage: StorageService,
               private uxService: UxService,
               private data_base: DataService) {
               this.nombreUsuario = localStorage.getItem('usuario')
@@ -51,21 +57,26 @@ export class UploadImageComponent implements OnInit {
   }
 
   publicar(descripcion: string, album: string, visibilidad: string) {
-    if (this.cancelar) {
+    console.log(visibilidad, '', album);
+    
+    if (!this.cancelar) {
       this.uxService.Toasterror('Selecciona una imagen 😑', 2000);
     } else {
       try {
+        this.authService.getCurrentUser().then((user) => {this.emailUser = user?.email!
+                                                          this.nameUser = user?.displayName!})
+
         let reader = new FileReader();
         this.nuevaFoto.nombre = this.archivo[0].name;
         
         reader.readAsDataURL(this.archivo[0])
         reader.onloadend = async () => {
           this.uxService.Loading('Publicando');
-          await this.storage.subirImagen(`${this.nombreUsuario}/${new Date().getTime()}`, reader.result)
+          await this.storage.subirImagen(`categorias/${this.emailUser}`,`${this.nuevaFoto.nombre}/${new Date().getTime()}`, reader.result)
           .then(urlImagen => {
               this.nuevaFoto.url = urlImagen || undefined;
               this.nuevaFoto.descripcion = descripcion
-              this.nuevaFoto.album = album
+              this.nuevaFoto.categoria = album
               this.nuevaFoto.visibilidad = visibilidad
               this.data_base.guardarPublicacion(this.nuevaFoto)
               this.archivo = undefined
@@ -79,7 +90,7 @@ export class UploadImageComponent implements OnInit {
                 url: '',
                 nombre: '',
                 descripcion: '',
-                album: '',
+                categoria: '',
                 visibilidad: ''
               }
             });

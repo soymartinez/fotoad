@@ -24,10 +24,10 @@ export class AuthGuard implements CanActivate {
             if (logueado) {
               return true;
             } else {
-              this.uxService.Toasterror('Primero inicie sesión 🙃', 1500);
-              setTimeout(() => {
-                this.router.navigate(['auth'])
-              }, 2000);
+              // this.uxService.Toasterror('Primero inicie sesión 🙃', 1500);
+              // setTimeout(() => {
+                this.router.navigateByUrl('/auth/login')
+              // }, 2000);
               return false;
             }
           })

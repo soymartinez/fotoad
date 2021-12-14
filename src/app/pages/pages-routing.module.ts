@@ -5,7 +5,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 
 import { HomeComponent } from './components/home/home.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { ExploreComponent } from './components/explore/explore.component';
+import { PublicarComponent } from './components/publicar/publicar.component';
 
 const routes: Routes = [
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'categorias', component: CategoriesComponent },
-      { path: 'explorar', component: ExploreComponent },
+      { path: 'publicar', component: PublicarComponent },
       { path: '**', redirectTo: '' },
     ]
   }

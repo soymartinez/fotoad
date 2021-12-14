@@ -7,7 +7,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { UserGeneralComponent } from './components/user-general/user-general.component';
 import { UserPasswordComponent } from './components/user-password/user-password.component';
 import { SharedModule } from '../shared/shared.module';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     AccountRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class AccountModule { }

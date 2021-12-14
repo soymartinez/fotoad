@@ -1,4 +1,55 @@
+article {
+    min-height: calc(100vh - 80px- 96px);
+}
 
+.pre-visualization {
+    /* min-height: 18rem; */
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pre-visualization i {
+    font-size: 1.5rem;
+    transition: all .2s ease;
+}
+
+.pre-visualization .delete-box {
+    color: rgb(255, 45, 45);
+}.pre-visualization .delete-box i:hover {
+    color: rgb(255, 28, 28);
+}
+
+.pre-visualization img {
+    transition: all .3s;
+}
+.delete-box,
+.upload-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #24242452;
+}
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* min-height: 18rem; */
+    font-size: 1rem;
+    color: red;
+    opacity: 1;
+
+    transition: all .2s ease;
+}
+
+.upload label {
+}
 h1 {
     font-size: 48px;
     padding-bottom: 30px;
@@ -83,6 +134,9 @@ select {
 @media screen and (max-width: 992px) {
     h1 {
         font-size: 40px;
+    }
+    article {
+        min-height: calc(100vh - 60px - 32px);
     }
 }
 

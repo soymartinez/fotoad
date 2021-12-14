@@ -1,5 +1,52 @@
-article {
-    min-height: calc(100vh - 80px - 96px);
+.pre-visualization {
+    min-height: 18rem;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(255, 70, 70);
+}
+
+.delete-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #24242452;
+}
+.pre-visualization i {
+    font-size: 1.5rem;
+    transition: all .2s ease;
+}
+
+.pre-visualization i:hover {
+    color: rgb(255, 28, 28);
+}
+
+.pre-visualization img {
+    width: 15rem;
+    border-radius: 10px;
+
+    transition: all .3s;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 18rem;
+
+    transition: all .2s ease;
+}
+
+.upload label {
+    font-size: 1rem;
+    color: red;
+    opacity: 1;
 }
 
 h1 {
@@ -27,17 +74,12 @@ td {
     padding: 16px 16px 16px 0;
 }
 
-input,
-select {
-    height: 52px;
-}
-
 .content-button {
     display: flex;
     flex-direction: column-reverse;
 }
 
-.buttonNuevaContraseña {
+.button {
     box-sizing: border-box;
     padding: 13px 48px;
     font-size: 14px;
@@ -51,38 +93,18 @@ select {
     text-align: center;
     align-self: center;
 
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
-.buttonNuevaContraseña:hover {
+
+.button:hover {
     background: var(--bluedeep);
     border: 1px solid var(--bluedeep);
     color: #fff;
 }
 
-.buttonCancelar {
-    padding: 13px 30px;
-    font-size: 14px;
-    background-color: transparent;
-    border-radius: 500px;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--placeholder);
-    font-weight: bold;
-    text-align: center;
-    align-self: center;
-
-    transition: all .3s ease;
-}
-.buttonCancelar:hover {
-    color: var(--bluedeep);
-}
-
 @media screen and (max-width: 992px) {
     h1 {
         font-size: 40px;
-    }
-    article {
-        min-height: calc(100vh - 60px - 32px);
     }
 }
 

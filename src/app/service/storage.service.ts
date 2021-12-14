@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { Imagenes, Album } from '../../../../models/interface';
+import { Imagenes } from '../models/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +11,12 @@ export class StorageService {
 
   imagenes: Imagenes[] = []
 
-  async subirImagen(nombre: string, base64: any) {
+  async subirImagen(path: string, nombreImagen: string, base64: any) {
     try {
-      let respuesta = await this.storage.ref('user/').child(nombre).putString(base64, 'data_url');
+      let respuesta = await this.storage.ref(path).child(nombreImagen).putString(base64, 'data_url');
       return await respuesta.ref.getDownloadURL();
     } catch (error) {
-      console.log(error);
-      return null;
+      return;
     }
   }
 

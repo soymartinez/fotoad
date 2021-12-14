@@ -1,1 +1,14 @@
-<app-upload-image></app-upload-image>
+<span>home works!</span>
+<div class="imagenes" >
+    <!-- <img style="width: 200px; height: 200px" src="{{imagen.url}}" alt=""> -->
+    <div class="card mb-3" *ngFor="let imagen of imagenes; let i = index">
+        <div class="img" style="height: 10rem; overflow: hidden;">
+            <img src="{{imagenes[i].url}}"
+                class="card-img-top" style="background-size: cover !important; background-repeat: no-repeat; background-position: top;" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Deporte</h5>
+            <p class="card-text"><small class="text-muted">Descripción: {{imagenes[i].descripcion}}</small></p>
+        </div>
+    </div>
+</div>

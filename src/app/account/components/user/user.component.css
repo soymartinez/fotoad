@@ -3,6 +3,7 @@
 
 .box-main {
     width: 100%;
+    min-height: min-content;
     margin: 0px auto;
     position: relative;
 }
@@ -22,9 +23,15 @@
 
 .box-sidebar {
     flex-basis: 35%;
+    min-height: 100%;
 }
 
 /* SIDEBAR CONTENIDO */
+
+.sidebar-content img{
+    background: #fff;
+    padding: 2px;
+}
 
 #photo-perfil {
     display: block;
@@ -86,7 +93,8 @@
     padding: 16px 10px;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    overflow: auto;
+    /* overflow: auto; */
+    min-height: min-content;
 }
 
 /* RESPONSIVE CONTENIDO */
@@ -116,7 +124,7 @@
         position: relative;
     }
     .box-main {
-        height: calc(100vh - 80px );
+        /* height: calc(100vh - 80px ); */
         margin: 0px auto;
     }
 }
@@ -143,7 +151,7 @@
         margin: 32px 0px !important;
     }
     .box-main {
-        height: calc(100vh - 60px);
+        /* height: calc(100vh - 60px); */
     }
 }
 

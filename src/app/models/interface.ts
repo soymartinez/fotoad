@@ -1,10 +1,10 @@
 export interface Usuario {
-    uid: string,
+    uid?: string,
     nombre: string,
     email: string,
     foto: string,
-    rol: string,
-    albumes: Album[]
+    rol?: 'Usuario' | 'Admin',
+    //albumes: Album[]
 }
 
 export interface Album {
@@ -22,7 +22,7 @@ export interface SubirImagen {
     url?: string
     nombre: string,
     descripcion: string,
-    album: string,
+    categoria: string,
     visibilidad: string,
 }
 
