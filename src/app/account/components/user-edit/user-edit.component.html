@@ -1,24 +1,38 @@
-<div>
-    <h1 class="fw-bold m-0">Editar perfil</h1>
-</div>
 <article>
+    <div>
+        <h1 class="fw-bold m-0">Editar perfil</h1>
+    </div>
+    <h3 class="fw-bold pb-4 m-0">Perfil</h3>
     <section>
         <form action="" method="post">
             <section class="content">
+                <div class="cambiar-imagen position-relative">
+                    <div class="pre-visualization px-2 my-4 pb-4">
+                        <img class="d-flex mx-auto w-25" style="border-radius: 15px;" src="{{nuevaImagen}}" alt="">
+                        <div class="upload-box" *ngIf="photoURLUser == nuevaImagen"> <!-- NUEVA IMAGEN -->
+                            <input class="d-none" id="file-upload" type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" />
+                            <label class="text-primary p-4" id="file-upload" for="file-upload"><i class="fas fa-cloud-upload-alt fa-3x"></i></label>
+                        </div>
+                        <div class="delete-box" *ngIf="photoURLUser !== nuevaImagen" (click)="deshacerCambio()"> <!-- REGRESAR IMAGEN ACTUAL -->
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="inputEmail">
+                    <label for="inputEmail" class="form-label">Nombre de usuario</label>
+                    <input type="email" name="name" [(ngModel)]="nombreUser" class="form-control" maxlength="20"value="{{nombreUser}}" id="inputEmail">
                 </div>
                 <div class="mb-3">
                     <fieldset disabled>
                         <label for="inputPassword" class="form-label disable">Contraseña</label>
-                        <input type="password" class="form-control" id="inputPassword"
+                        <input type="password" autocomplete="off" class="form-control" id="inputPassword"
                             placeholder="">
                     </fieldset>
                 </div>
                 <div class="mb-3">
                     <label for="labelGenero" class="form-label">Genero</label>
-                    <select id="inputGroupSelect" class="form-select">
+                    <select id="inputGroupGenero" class="form-select">
                         <option value="1">Hombre</option>
                         <option value="2">Mujer</option>
                         <option value="3">No binario</option>
@@ -31,7 +45,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="labelPaisRegion" class="form-label">País o región</label>
-                    <select id="inputGroupSelect" class="form-select">
+                    <select id="inputGroupPais" class="form-select">
                         <option selected>México</option>
                     </select>
                 </div>
@@ -40,7 +54,7 @@
                 <a routerLink="/account/overview" class="buttonCancelar">
                     Cancelar
                 </a>
-                <a routerLink="/account/overview" class="buttonGuardar">
+                <a (click)="updateProfile()" class="buttonGuardar">
                     Guardar perfil
                 </a>
             </div>

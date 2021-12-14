@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/services/auth.service';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthService,
+              private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.getPerfil()
+  }
+
+  photoURLUser: string = ""
+
+  getPerfil() {
+    this.authService.getCurrentUser().then((user) => {
+      this.dataService.getDoc('usuarios', user?.email)
+        .subscribe((data: any)=> {
+          this.photoURLUser = data.foto
+        })
+    })
   }
 
 }

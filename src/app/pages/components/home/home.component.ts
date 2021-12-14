@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { DataService } from 'src/app/service/data.service';
 import { AuthService } from '../../../auth/services/auth.service';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +9,36 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class HomeComponent implements OnInit {
 
-  get usuario() {
-    return this.authService.usuario;
-  }
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService,
+              public dataService: DataService) { }
 
   ngOnInit(): void {
+    this.getCategorias()
   }
+  
+  usuarioEmail: string = ''
+  imagenes: any[] = []
 
-  imagenes: any[] = [];
+  getCategorias() {
+    this.dataService.getCategoriasDeportes()
+      .subscribe((deporte: any[]) => {
+        for (let index = 0; index < deporte.length; index++) {
 
+          if (deporte[index].url !== this.imagenes[index]) {
+            this.imagenes.push(deporte[index])
+            console.log(this.imagenes);
+          }
+        }
+        }
+      
+      // const data = {
+      //   // categoria: deporte.categoria,
+      //   // descripcion: deporte.descripcion,
+      //   // nombre: deporte.nombre,
+      //   url: deporte.url
+      //   // visibilidad: deporte.visibilidad
+      // }
+    )
+  }
 }

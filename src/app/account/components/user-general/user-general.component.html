@@ -1,18 +1,21 @@
-<div>
-    <h1 class="fw-bold m-0">Vista general de la cuenta</h1>
-</div>
 <article>
+    <div>
+        <h1 class="fw-bold m-0">Vista general de la cuenta</h1>
+    </div>
     <h3 class="fw-bold pb-4 m-0">Perfil</h3>
     <section>
+        <div class="px-2 my-4 pb-4">
+            <img class="d-flex mx-auto w-25" style="border-radius: 15px;" src="{{photoURLUser}}" alt="">
+        </div>
         <table class="w-100">
             <tbody>
                 <tr>
                     <td class="txt-hover">Nombre de usuario</td>
-                    <td class="text-end text-xl-start">Alvaro Martinez</td>
+                    <td class="text-end text-xl-start">{{nombreUser}}</td>
                 </tr>
                 <tr>
                     <td class="txt-hover">Email</td>
-                    <td class="text-end text-xl-start">fotoad@fotoad.mx</td>
+                    <td class="text-end text-xl-start">{{emailUser}}</td>
                 </tr>
                 <tr>
                     <td class="txt-hover">Fecha de nacimiento</td>
@@ -25,9 +28,9 @@
             </tbody>
         </table>
     </section>
+    <div class="content-button">
+        <a routerLink="/account/profile" class="button">
+            Editar perfil
+        </a>
+    </div>
 </article>
-<div class="content-button">
-    <a routerLink="/account/profile" class="button">
-        Editar perfil
-    </a>
-</div>
